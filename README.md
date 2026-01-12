@@ -6,20 +6,34 @@ Legal pages (Privacy Policy, Support) for my iOS apps.
 
 ```
 app_legals/
-├── metersnap/
-│   ├── index.html      → Redirect to privacy.html
-│   ├── privacy.html    → Privacy Policy
-│   └── support.html    → FAQ & Support
-└── [future-app]/
-    └── ...
+├── metersnap/                    # Live legal pages
+│   ├── index.html                → Redirect to privacy.html
+│   ├── privacy.html              → Privacy Policy
+│   └── support.html              → FAQ & Support
+├── [future-app]/                 # Add more apps here
+│   └── ...
+└── _draft_jaszka_website/        # Draft: Full website for jaszka.com (Backlog)
+    ├── index.html                → Homepage
+    ├── apps/metersnap/           → App landing page
+    └── legal/                    → Impressum, Datenschutz
 ```
 
 ## GitHub Pages URLs
 
-After enabling GitHub Pages, the URLs will be:
+**Live:**
+- **MeterSnap Privacy:** `https://andyholiday.github.io/app_legals/metersnap/privacy.html`
+- **MeterSnap Support:** `https://andyholiday.github.io/app_legals/metersnap/support.html`
 
-- **MeterSnap Privacy:** `https://[username].github.io/app_legals/metersnap/privacy.html`
-- **MeterSnap Support:** `https://[username].github.io/app_legals/metersnap/support.html`
+**Draft (not deployed):**
+- Full website prepared for jaszka.com hosting (Netcup)
+- Located in `_draft_jaszka_website/`
+
+## Adding a New App
+
+1. Create folder: `[app-name]/`
+2. Add `privacy.html` and `support.html`
+3. Optional: `index.html` redirect
+4. Commit and push
 
 ## Setup
 
