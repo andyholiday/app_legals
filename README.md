@@ -42,6 +42,17 @@ app_legals/
 3. Branch: `main` / `root`
 4. Save
 
+## Vercel Deployment
+
+This repo also deploys as a central static site on Vercel (`vercel.json` enables
+clean URLs, so `.html` is optional). Used for the App Store Connect Privacy /
+Support URLs.
+
+- **MeterSnap Privacy:** `/metersnap/privacy`
+- **MeterSnap Support:** `/metersnap/support`
+
+Deploy: `vercel --prod` from the repo root.
+
 ---
 
 © 2025 André Jaszka
