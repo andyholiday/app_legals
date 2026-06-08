@@ -217,199 +217,151 @@
             </p>
 
             <!-- ============================================================ -->
-            <!-- SECTION 2 – DATA CATEGORIES                                  -->
+            <!-- SECTION 2 – SUMMARY                                          -->
             <!-- ============================================================ -->
-            <h2>2. What data is processed?</h2>
+            <h2>2. Summary</h2>
 
-            <h3>2.1 Account data</h3>
-            <p>For optional cloud synchronisation (Supabase), the following data may be collected:</p>
-            <ul>
-                <li>Email address (for email-based registration)</li>
-                <li>Authentication token (session token, stored in the device Keychain)</li>
-                <li>Apple ID identifier (for Sign in with Apple, once enabled)</li>
-            </ul>
-            <p>All app content can also be used entirely locally, without an account.</p>
+            <div class="highlight-box">
+                <strong>Zeitkorn v1 is a fully local app.</strong>
+                <ul>
+                    <li>All data stays exclusively on your device.</li>
+                    <li>No data is transmitted to any server.</li>
+                    <li>No account is required — the app works completely anonymously.</li>
+                    <li>No tracking, no analytics, no advertising.</li>
+                    <li>Photos are automatically stripped of metadata (EXIF) before local storage.</li>
+                </ul>
+            </div>
 
-            <h3>2.2 Content data (user-generated)</h3>
-            <p>This data is entered solely by you and stored locally (optionally synchronised via cloud):</p>
+            <!-- ============================================================ -->
+            <!-- SECTION 3 – WHAT DATA IS PROCESSED                           -->
+            <!-- ============================================================ -->
+            <h2>3. What data is processed?</h2>
+            <p>Zeitkorn processes only data that you enter yourself in the app. This data is stored locally in a SQLite database on your device and does not leave it:</p>
             <ul>
                 <li>Child's name</li>
                 <li>Date of birth and optionally place of birth and birth measurements (height, weight)</li>
                 <li>Optional gender</li>
-                <li>Milestones: date, category, title, note, sticker identifier</li>
+                <li>Milestones: date, category, title, note</li>
                 <li>Photos attached to milestones (EXIF-stripped before storage, see Section 5)</li>
+                <li>App preferences (language, colour scheme, display mode) — UI preferences only, no personal reference</li>
             </ul>
-
-            <h3>2.3 Consent records</h3>
-            <p>The app records your consent decisions (e.g. for future analytics) with a timestamp, type, and status — stored locally and optionally on the server.</p>
-
-            <h3>2.4 Technical operational data</h3>
-            <p>Internally used, non-personal operational data:</p>
-            <ul>
-                <li>Synchronisation queue (local queue, never transmitted directly)</li>
-                <li>App metadata (e.g. timestamp of last sync, anonymous device identifier)</li>
-                <li>Preferences (language, colour scheme, display mode) — UI preferences only, no personal reference</li>
-            </ul>
+            <p>No account data, authentication tokens, or device identifiers are collected. There is no user account in this version of the app.</p>
 
             <!-- ============================================================ -->
-            <!-- SECTION 3 – PURPOSES AND LEGAL BASES                         -->
+            <!-- SECTION 4 – PURPOSE AND LEGAL BASIS                          -->
             <!-- ============================================================ -->
-            <h2>3. Purposes and legal bases of processing</h2>
-
-            <h3>3.1 App operation and milestone documentation</h3>
-            <p><strong>Purpose:</strong> Storage and display of content data entered by you (milestones, photos, baby data).</p>
-            <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (performance of a contract / pre-contractual measures) — the processing is necessary to fulfil the usage contract (app purchase).</p>
-
-            <h3>3.2 Cloud synchronisation (optional)</h3>
-            <p><strong>Purpose:</strong> Cross-device synchronisation of your data via Supabase (EU server, Frankfurt).</p>
-            <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (performance of a contract) — you consciously activate this feature.</p>
-
-            <h3>3.3 Anonymous usage analytics (PostHog – not yet active)</h3>
-            <p><strong>Purpose:</strong> Improving app quality through anonymised usage events.</p>
-            <p><strong>Legal basis:</strong> Art. 6(1)(a) GDPR (consent) — PostHog will only be initialised after explicit consent. Baby data (name, date of birth, photos, milestone notes) will <strong>never</strong> be transmitted to PostHog.</p>
-            <p><strong>Current status:</strong> PostHog is not active in the current app version. The library is present, but initialisation is implemented as an explicitly disabled stub in the code (GDPR Art. 9, zero telemetry before consent). A future version may send anonymised events, provided you give consent.</p>
-
-            <h3>3.4 Crash reporting (Sentry – not yet active)</h3>
-            <p><strong>Purpose:</strong> Error detection and fixing to improve app stability.</p>
-            <p><strong>Legal basis:</strong> Art. 6(1)(a) GDPR (consent) — also not yet active, same consent-gate logic as PostHog.</p>
-
-            <!-- ============================================================ -->
-            <!-- SECTION 4 – EU STORAGE                                       -->
-            <!-- ============================================================ -->
-            <h2>4. Storage location – EU region</h2>
-
-            <div class="highlight-box">
-                <strong>Your cloud data stays in the EU.</strong>
-                If you use cloud synchronisation, your data is stored on Supabase servers in the EU region (Frankfurt, Germany). No transfer to third countries outside the EEA takes place without appropriate safeguards.
-            </div>
-
-            <p>Photos are stored locally on your device and — if cloud sync is enabled — uploaded EXIF-stripped to the Supabase Storage bucket of the same EU project.</p>
+            <h2>4. Purpose and legal basis of processing</h2>
+            <p><strong>Purpose:</strong> Local storage and display of content data entered by you (milestones, photos, baby data), so you can maintain a personal timeline of your child's development.</p>
+            <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (performance of a contract) — the processing is necessary to provide the service covered by the app purchase.</p>
+            <p>No processing takes place on the basis of consent or legitimate interests, as no data leaves the device.</p>
 
             <!-- ============================================================ -->
             <!-- SECTION 5 – EXIF STRIPPING                                   -->
             <!-- ============================================================ -->
             <h2>5. EXIF stripping for photos</h2>
-            <p>Before a photo is saved or uploaded, the app removes all EXIF metadata from the image file. This includes in particular GPS coordinates, device information, and capture timestamps. Stripping occurs on your device before any bytes leave it.</p>
+            <p>Before a photo is saved, the app removes all EXIF metadata from the image file. This includes in particular GPS coordinates, device information, and capture timestamps. Stripping occurs entirely on your device.</p>
             <p>The photo is scaled to a maximum edge length of 2,048 pixels (aspect ratio preserved) and saved at 90&nbsp;% JPEG quality. A thumbnail version (max. 320 pixels) is also created locally.</p>
+            <p>Since photos never leave the device, EXIF stripping serves as an additional safeguard in case of device loss or unexpected data access.</p>
 
             <!-- ============================================================ -->
-            <!-- SECTION 6 – RETENTION AND DELETION                           -->
+            <!-- SECTION 6 – NO TRACKING / NO ANALYTICS                       -->
             <!-- ============================================================ -->
-            <h2>6. Retention periods and deletion</h2>
+            <h2>6. No tracking, no analytics</h2>
+            <p>Zeitkorn v1 contains no active tracking or analytics tools:</p>
             <ul>
-                <li><strong>Local data:</strong> Remains on your device until you use the "Delete account" feature or uninstall the app.</li>
-                <li><strong>Cloud data (Supabase):</strong> Fully deleted when you execute "Delete account" (GDPR Art. 17). Soft-deleted milestones are permanently purged from the system by a nightly database job.</li>
-                <li><strong>Photos:</strong> Deleted from both the device and Supabase Storage when the account is deleted.</li>
-                <li><strong>Authentication tokens:</strong> Deleted from the device Keychain when the account is deleted.</li>
+                <li>PostHog (analytics library) is included as a dependency but is not initialised. The entry point in the app is an explicitly empty stub — zero bytes of telemetry are sent.</li>
+                <li>Sentry (crash reporting) is also not active.</li>
+                <li>There is no advertising ID tracking and no fingerprinting.</li>
             </ul>
+            <p>Should future versions introduce optional analytics, this will only happen after explicit consent, and baby data will never be transmitted to analytics services.</p>
 
             <!-- ============================================================ -->
-            <!-- SECTION 7 – YOUR RIGHTS                                      -->
+            <!-- SECTION 7 – NO DATA PROCESSORS FOR APP DATA                  -->
             <!-- ============================================================ -->
-            <h2>7. Your rights as a data subject</h2>
-            <p>Under the GDPR you have the following rights:</p>
-            <ul>
-                <li><strong>Access (Art. 15):</strong> You can request information about your stored data at any time.</li>
-                <li><strong>Rectification (Art. 16):</strong> You can correct inaccurate data directly in the app.</li>
-                <li><strong>Erasure / Right to be forgotten (Art. 17):</strong> Under Settings → "Delete account", all personal data is completely deleted locally and on the server.</li>
-                <li><strong>Data portability / Export (Art. 20):</strong> Under Settings → "Export data", you can download all your data as a ZIP archive (manifest.json + photos) for reuse.</li>
-                <li><strong>Object (Art. 21):</strong> Where data is processed on the basis of legitimate interests, you may object.</li>
-                <li><strong>Withdraw consent (Art. 7(3)):</strong> Consent given (e.g. for analytics) can be withdrawn at any time without affecting the lawfulness of prior processing.</li>
-                <li><strong>Lodge a complaint with a supervisory authority (Art. 77):</strong> You have the right to complain to a data protection supervisory authority. In Germany, this is, for example, the competent state authority or the Federal Commissioner for Data Protection and Freedom of Information (BfDI).</li>
-            </ul>
+            <h2>7. Data processors</h2>
+            <p>Since Zeitkorn v1 does not transmit any app content to servers, there are no data processors within the meaning of Art. 28 GDPR for baby data, milestones, or photos.</p>
+            <p>Two services have a limited, indirect connection:</p>
 
-            <p>To exercise your rights (to the extent not directly possible in the app), please contact: <a href="mailto:an.creat1985@gmail.com">an.creat1985@gmail.com</a>.</p>
-
-            <!-- ============================================================ -->
-            <!-- SECTION 8 – DATA PROCESSORS                                  -->
-            <!-- ============================================================ -->
-            <h2>8. Data processors (Art. 28 GDPR)</h2>
-            <p>We engage the following service providers with whom data processing agreements are or will be concluded:</p>
-
-            <h3>8.1 App data storage: Supabase</h3>
-            <p><strong>Role:</strong> Cloud backend for user data (babies, milestones, photos, consent records).</p>
-            <p><strong>Region:</strong> EU (Frankfurt, Germany). No third-country transfer.</p>
-            <p><strong>Privacy page:</strong> <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></p>
-
-            <h3>8.2 Anonymous analytics: PostHog (not yet active)</h3>
-            <p><strong>Role:</strong> Anonymised usage analysis (only after consent).</p>
-            <p><strong>Region:</strong> EU hosting (PostHog Cloud EU). Baby data is explicitly not transmitted.</p>
-            <p><strong>Privacy page:</strong> <a href="https://posthog.com/privacy" target="_blank" rel="noopener">posthog.com/privacy</a></p>
-
-            <h3>8.3 Legal site hosting: Vercel</h3>
-            <p><strong>Role:</strong> Hosting of this privacy page (static HTML files).</p>
-            <p><strong>Note:</strong> Vercel collects server logs (IP address, timestamp) per its own privacy policy. These data have no connection to your app content data.</p>
-            <p><strong>Privacy page:</strong> <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a></p>
-
-            <h3>8.4 App distribution: Apple App Store</h3>
-            <p><strong>Role:</strong> Distribution platform (App Store), transaction processing (purchase), Sign in with Apple.</p>
+            <h3>Apple App Store</h3>
+            <p><strong>Role:</strong> Distribution platform and purchase processing. Apple processes your payment and Apple ID data during the purchase under its own privacy policy. These data are held exclusively by Apple, not by us.</p>
             <p><strong>Privacy page:</strong> <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener">apple.com/privacy</a></p>
 
-            <!-- ============================================================ -->
-            <!-- SECTION 9 – INTERNATIONAL TRANSFERS                          -->
-            <!-- ============================================================ -->
-            <h2>9. International data transfers</h2>
-            <p>Supabase and PostHog (when active) host your data in the EU (Frankfurt). No transfer to third countries occurs for these services.</p>
-            <p>Apple as App Store operator is covered by the EU–US Data Privacy Framework for its services. Please refer to the Apple privacy policy for details.</p>
-            <p><strong>UK and Switzerland:</strong> This privacy policy is aligned with the GDPR. UK users (UK GDPR) and Swiss users (nFADP) may also exercise the data subject rights described. Specific national requirements may differ.</p>
+            <h3>Vercel (this legal page only)</h3>
+            <p><strong>Role:</strong> Hosting of this privacy page (static HTML files, no connection to app content whatsoever). Vercel collects server logs (IP address, timestamp) when you visit this website.</p>
+            <p><strong>Privacy page:</strong> <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a></p>
 
             <!-- ============================================================ -->
-            <!-- SECTION 10 – CHILDREN'S DATA                                 -->
+            <!-- SECTION 8 – NO INTERNATIONAL TRANSFERS                       -->
             <!-- ============================================================ -->
-            <h2>10. Children's data</h2>
+            <h2>8. No transfer of app data</h2>
+            <p>Since all data remains exclusively on your device, there is no transfer to third countries or to any server. There are no international data transfers of your app content.</p>
+
+            <!-- ============================================================ -->
+            <!-- SECTION 9 – CHILDREN'S DATA                                  -->
+            <!-- ============================================================ -->
+            <h2>9. Children's data</h2>
             <div class="highlight-box">
                 <strong>Important note on children's data</strong>
-                <p>Zeitkorn is directed exclusively at adult parents and guardians as account holders. The app is <strong>not</strong> directed at children within the meaning of Art. 8 GDPR (in Germany: children under 16) as users. Children's data (name, date of birth, photos) is entered and stored solely by adult account holders for personal, family use.</p>
-                <p>This data is not used at any time for advertising purposes, profiling, or disclosure to third parties.</p>
+                <p>Zeitkorn is directed exclusively at adult parents and guardians as users. The app is <strong>not</strong> directed at children within the meaning of Art. 8 GDPR (in Germany: children under 16) as users.</p>
+                <p>Children's data (name, date of birth, photos) is entered solely by adult users for personal, family use — and remains on the device. This data is not used at any time for advertising purposes, profiling, or disclosure to third parties.</p>
             </div>
 
             <!-- ============================================================ -->
-            <!-- SECTION 11 – ANALYTICS MINIMISATION                         -->
+            <!-- SECTION 10 – RETENTION                                       -->
             <!-- ============================================================ -->
-            <h2>11. Analytics minimisation</h2>
-            <p>PostHog is <strong>not active</strong> in the current app version. While the source code includes the PostHog library, the initialisation is an explicit no-op stub (per GDPR Art. 9: zero telemetry before consent).</p>
-            <p>Should a future version activate analytics, the following applies:</p>
+            <h2>10. Retention</h2>
+            <p>All data remains on your device for as long as you use the app. You can delete all data at any time:</p>
             <ul>
-                <li>Only anonymised events (e.g. "milestone captured", "export started") without user-generated content.</li>
-                <li>No baby names, dates of birth, photos, notes, or other content-related data sent to PostHog.</li>
-                <li>Activation only after explicit in-app consent.</li>
-                <li>PostHog EU hosting (Frankfurt) — no transfer outside the EU.</li>
+                <li><strong>Individual milestones or babies:</strong> Can be deleted directly in the app.</li>
+                <li><strong>All data at once:</strong> Settings → "Delete account" deletes all personal data from the app database and all photo files from the device.</li>
+                <li><strong>Complete removal:</strong> Uninstalling the app removes all locally stored data from the device.</li>
             </ul>
 
             <!-- ============================================================ -->
-            <!-- SECTION 12 – DELETION AND EXPORT MECHANICS                   -->
+            <!-- SECTION 11 – YOUR RIGHTS                                     -->
             <!-- ============================================================ -->
-            <h2>12. Deletion and export functions in the app</h2>
-
-            <h3>12.1 Delete account (GDPR Art. 17)</h3>
-            <p>Under Settings → "Delete account", the following data is deleted:</p>
+            <h2>11. Your rights as a data subject</h2>
+            <p>Since all data is on your device and you have full control over it, you can exercise most data subject rights directly in the app:</p>
             <ul>
-                <li>All local database rows: babies, milestones, photos, consent records, synchronisation queue, app metadata</li>
-                <li>All photo and thumbnail files on the device</li>
-                <li>Session tokens in the Keychain</li>
-                <li>Supabase session (sign-out from the server)</li>
+                <li><strong>Access (Art. 15):</strong> All stored data is directly visible in the app.</li>
+                <li><strong>Rectification (Art. 16):</strong> Baby data and milestones can be edited in the app at any time.</li>
+                <li><strong>Erasure / Right to be forgotten (Art. 17):</strong> Settings → "Delete account" removes all personal data from the app database and all photo and thumbnail files from the device. The action is permanent and cannot be undone.</li>
+                <li><strong>Data portability / Export (Art. 20):</strong> Settings → "Export data" creates a ZIP archive (manifest.json + photos) containing all your data in an open format. The archive contains no absolute device paths.</li>
+                <li><strong>Restriction of processing (Art. 18):</strong> Since no external processing takes place, restriction is in your hands through your use of the app.</li>
+                <li><strong>Object (Art. 21):</strong> Since processing is based solely on contract performance and all data remains local, objection is not practically relevant.</li>
+                <li><strong>Lodge a complaint with a supervisory authority (Art. 77):</strong> You have the right to complain to a data protection supervisory authority, e.g. in Germany the Federal Commissioner for Data Protection and Freedom of Information (BfDI) or the competent state authority.</li>
             </ul>
-            <p>Milestone templates are excluded from deletion (non-personal catalogue; reseeded on the next app start).</p>
+            <p>For questions that cannot be resolved directly in the app, please contact: <a href="mailto:an.creat1985@gmail.com">an.creat1985@gmail.com</a>.</p>
 
-            <h3>12.2 Data export (GDPR Art. 20)</h3>
-            <p>Under Settings → "Export data", a ZIP archive is created containing:</p>
+            <!-- ============================================================ -->
+            <!-- SECTION 12 – DATA SECURITY                                   -->
+            <!-- ============================================================ -->
+            <h2>12. Data security</h2>
+            <p>Since all data remains locally on your device, the security mechanisms of iOS apply:</p>
             <ul>
-                <li><code>manifest.json</code>: all baby data, milestones, photo metadata, consent records in JSON format</li>
-                <li><code>photos/</code>: all locally present photos (EXIF-stripped)</li>
+                <li>Device encryption (Data Protection API)</li>
+                <li>App sandboxing (other apps cannot access Zeitkorn data)</li>
+                <li>Face ID / Touch ID device protection (by the operating system)</li>
             </ul>
-            <p>The archive contains no absolute device paths and no internal system data.</p>
 
             <!-- ============================================================ -->
-            <!-- SECTION 13 – CHANGES                                         -->
+            <!-- SECTION 13 – POSSIBLE FUTURE FEATURES                        -->
             <!-- ============================================================ -->
-            <h2>13. Changes to this privacy policy</h2>
-            <p>We may update this privacy policy when there are material changes to the app or the data landscape. The date of the last change is indicated at the top of this page. Material changes will be communicated in the app.</p>
+            <h2>13. Possible future features</h2>
+            <p>Future versions may introduce optional features that involve data leaving the device — for example, voluntary cloud synchronisation across devices or an optional user account. If introduced, such features will be entirely optional, and this privacy policy will be updated before they go live.</p>
+            <p>This privacy policy describes only the current state of Zeitkorn v1.</p>
 
             <!-- ============================================================ -->
-            <!-- SECTION 14 – CONTACT                                         -->
+            <!-- SECTION 14 – CHANGES                                         -->
             <!-- ============================================================ -->
-            <h2>14. Contact</h2>
-            <p>For questions about data protection or to exercise your data subject rights, please contact:</p>
+            <h2>14. Changes to this privacy policy</h2>
+            <p>This privacy policy will be updated when there are material changes to the app or data practices. The date of the last change is shown at the top of this page. Material changes will be communicated in the app.</p>
+
+            <!-- ============================================================ -->
+            <!-- SECTION 15 – CONTACT                                         -->
+            <!-- ============================================================ -->
+            <h2>15. Contact</h2>
+            <p>For questions about data protection, please contact:</p>
             <p>
                 <strong>André Jaszka</strong><br>
                 Email: <a href="mailto:an.creat1985@gmail.com">an.creat1985@gmail.com</a>

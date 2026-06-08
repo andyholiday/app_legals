@@ -149,28 +149,6 @@
             margin-bottom: 8px;
         }
 
-        .placeholder-box {
-            background: #fff3cd;
-            border: 2px dashed #ffc107;
-            border-radius: 12px;
-            padding: 20px 24px;
-            margin: 24px 0;
-            color: #664d03;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            .placeholder-box {
-                background: #332700;
-                border-color: #ffc107;
-                color: #ffe083;
-            }
-        }
-
-        .placeholder-box strong {
-            display: block;
-            margin-bottom: 8px;
-        }
-
         footer {
             padding: 40px 0;
             border-top: 1px solid var(--border);
@@ -232,7 +210,6 @@
             <!-- ABSCHNITT 1 – VERANTWORTLICHER                               -->
             <!-- ============================================================ -->
             <h2>1. Verantwortliche Person</h2>
-
             <p>Verantwortlich im Sinne der DSGVO (Art. 4 Nr. 7) ist:</p>
             <p>
                 <strong>André Jaszka</strong><br>
@@ -240,199 +217,151 @@
             </p>
 
             <!-- ============================================================ -->
-            <!-- ABSCHNITT 2 – DATENKATEGORIEN                                -->
+            <!-- ABSCHNITT 2 – KURZFASSUNG                                    -->
             <!-- ============================================================ -->
-            <h2>2. Welche Daten werden verarbeitet?</h2>
+            <h2>2. Das Wichtigste in Kürze</h2>
 
-            <h3>2.1 Accountdaten</h3>
-            <p>Für die optionale Cloud-Synchronisierung (Supabase) können folgende Daten erfasst werden:</p>
-            <ul>
-                <li>E-Mail-Adresse (bei E-Mail-Registrierung)</li>
-                <li>Authentifizierungstoken (session token, im Keychain des Geräts gespeichert)</li>
-                <li>Apple-ID-Kennung (bei Sign in with Apple, sobald aktiviert)</li>
-            </ul>
-            <p>Alle App-Inhalte können auch vollständig lokal – ohne Account – genutzt werden.</p>
+            <div class="highlight-box">
+                <strong>Zeitkorn v1 ist eine rein lokale App.</strong>
+                <ul>
+                    <li>Alle Daten bleiben ausschließlich auf Ihrem Gerät.</li>
+                    <li>Es werden keine Daten an Server übertragen.</li>
+                    <li>Kein Benutzerkonto erforderlich — die App funktioniert vollständig anonym.</li>
+                    <li>Kein Tracking, keine Analytics, keine Werbung.</li>
+                    <li>Fotos werden vor der lokalen Speicherung automatisch von Metadaten (EXIF) bereinigt.</li>
+                </ul>
+            </div>
 
-            <h3>2.2 Inhaltsdaten (nutzergeneriert)</h3>
-            <p>Diese Daten werden nur von Ihnen selbst erfasst und lokal gespeichert (optional per Cloud synchronisiert):</p>
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 3 – WELCHE DATEN WERDEN VERARBEITET                -->
+            <!-- ============================================================ -->
+            <h2>3. Welche Daten werden verarbeitet?</h2>
+            <p>Zeitkorn verarbeitet ausschließlich Daten, die Sie selbst in der App eingeben. Diese werden lokal in einer SQLite-Datenbank auf Ihrem Gerät gespeichert und verlassen es nicht:</p>
             <ul>
                 <li>Name des Kindes</li>
                 <li>Geburtsdatum und optional Geburtsort sowie Geburtsmaße (Größe, Gewicht)</li>
                 <li>Optionales Geschlecht</li>
-                <li>Meilensteine: Datum, Kategorie, Titel, Notiz, Sticker-ID</li>
-                <li>Fotos zu Meilensteinen (EXIF-bereinigt vor Speicherung, siehe Abschnitt 5)</li>
+                <li>Meilensteine: Datum, Kategorie, Titel, Notiz</li>
+                <li>Fotos zu Meilensteinen (EXIF-bereinigt vor der Speicherung, siehe Abschnitt 5)</li>
+                <li>App-Einstellungen (Sprache, Farbschema, Anzeigemodus) — reine UI-Präferenzen ohne Personenbezug</li>
             </ul>
-
-            <h3>2.3 Einwilligungsdaten</h3>
-            <p>Die App protokolliert Ihre Einwilligungen (z. B. für künftige Analytics) mit Zeitstempel, Typ und Status – lokal und optional auf dem Server.</p>
-
-            <h3>2.4 Technische Betriebsdaten</h3>
-            <p>Intern verwendete, nicht-personenbezogene Betriebsdaten:</p>
-            <ul>
-                <li>Synchronisierungswarteschlange (lokale Queue, nie direkt übertragen)</li>
-                <li>App-Metadaten (z. B. Zeitpunkt der letzten Synchronisierung, anonyme Geräte-ID)</li>
-                <li>Einstellungen (Sprache, Farbschema, Anzeigemodus) – reine UI-Präferenzen, kein Personenbezug</li>
-            </ul>
+            <p>Es werden keine Accountdaten, keine Authentifizierungstoken und keine Gerätekennungen erfasst. Es gibt in dieser App-Version kein Benutzerkonto.</p>
 
             <!-- ============================================================ -->
-            <!-- ABSCHNITT 3 – ZWECKE UND RECHTSGRUNDLAGEN                    -->
+            <!-- ABSCHNITT 4 – ZWECK UND RECHTSGRUNDLAGE                      -->
             <!-- ============================================================ -->
-            <h2>3. Zwecke und Rechtsgrundlagen der Verarbeitung</h2>
-
-            <h3>3.1 App-Betrieb und Meilenstein-Dokumentation</h3>
-            <p><strong>Zweck:</strong> Speicherung und Anzeige der von Ihnen eingegebenen Inhaltsdaten (Meilensteine, Fotos, Babydaten).</p>
-            <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung / vorvertragliche Maßnahme) – die Verarbeitung ist für die Erfüllung des Nutzungsvertrags (App-Kauf) erforderlich.</p>
-
-            <h3>3.2 Cloud-Synchronisierung (optional)</h3>
-            <p><strong>Zweck:</strong> Geräteübergreifende Synchronisierung Ihrer Daten über Supabase (EU-Server, Frankfurt).</p>
-            <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) – Sie aktivieren diese Funktion bewusst.</p>
-
-            <h3>3.3 Anonyme Nutzungsanalyse (PostHog – noch nicht aktiv)</h3>
-            <p><strong>Zweck:</strong> Verbesserung der App-Qualität durch anonymisierte Nutzungsereignisse.</p>
-            <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) – PostHog wird erst nach expliziter Einwilligung initialisiert. Babydaten (Name, Geburtsdatum, Fotos, Meilenstein-Texte) werden <strong>niemals</strong> an PostHog übermittelt.</p>
-            <p><strong>Aktueller Status:</strong> PostHog ist in der aktuellen App-Version nicht aktiv. Die Bibliothek ist vorhanden, jedoch ist die Initialisierung im Code als explizit deaktivierter Stub implementiert (GDPR Art. 9, kein Telemetrie vor Einwilligung). Eine künftige Version kann anonymisierte Ereignisse senden, sofern Sie einwilligen.</p>
-
-            <h3>3.4 Crash-Berichte (Sentry – noch nicht aktiv)</h3>
-            <p><strong>Zweck:</strong> Fehlererkennung und -behebung zur Verbesserung der App-Stabilität.</p>
-            <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) – ebenfalls noch nicht aktiv, gleiche Consent-Gate-Logik wie PostHog.</p>
+            <h2>4. Zweck und Rechtsgrundlage der Verarbeitung</h2>
+            <p><strong>Zweck:</strong> Lokale Speicherung und Anzeige der von Ihnen eingegebenen Inhaltsdaten (Meilensteine, Fotos, Babydaten), damit Sie eine persönliche Zeitleiste der Entwicklung Ihres Kindes führen können.</p>
+            <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) — die Verarbeitung ist notwendig, um die vom App-Kauf umfasste Leistung zu erbringen.</p>
+            <p>Es findet keine Verarbeitung auf Grundlage von Einwilligungen oder berechtigten Interessen statt, da keine Daten das Gerät verlassen.</p>
 
             <!-- ============================================================ -->
-            <!-- ABSCHNITT 4 – EU-SPEICHERUNG                                 -->
-            <!-- ============================================================ -->
-            <h2>4. Speicherort – EU-Region</h2>
-
-            <div class="highlight-box">
-                <strong>Ihre Cloud-Daten verbleiben in der EU.</strong>
-                Soweit Sie die Cloud-Synchronisierung nutzen, werden Ihre Daten auf Supabase-Servern in der Region EU (Frankfurt, Deutschland) gespeichert. Es findet keine Übertragung in Drittländer außerhalb des EWR statt, ohne dass geeignete Garantien vorliegen.
-            </div>
-
-            <p>Fotos werden lokal auf Ihrem Gerät gespeichert und – sofern aktiviert – EXIF-bereinigt in den Supabase Storage-Bucket desselben EU-Projekts hochgeladen.</p>
-
-            <!-- ============================================================ -->
-            <!-- ABSCHNITT 5 – EXIF-BEREINIGUNG                               -->
+            <!-- ABSCHNITT 5 – EXIF-BEREINIGUNG BEI FOTOS                     -->
             <!-- ============================================================ -->
             <h2>5. EXIF-Bereinigung bei Fotos</h2>
-            <p>Bevor ein Foto gespeichert oder hochgeladen wird, entfernt die App sämtliche EXIF-Metadaten aus der Bilddatei. Dazu gehören insbesondere GPS-Koordinaten, Geräteinformationen und Aufnahmezeitstempel. Die Bereinigung findet auf Ihrem Gerät statt, bevor die Bytes das Gerät verlassen.</p>
-            <p>Das Foto wird auf maximal 2.048 Pixel Kantenlänge skaliert (Seitenverhältnis bleibt erhalten) und mit 90&nbsp;% JPEG-Qualität gespeichert. Eine Thumbnail-Version (max. 320 Pixel) wird ebenfalls lokal erstellt.</p>
+            <p>Bevor ein Foto gespeichert wird, entfernt die App sämtliche EXIF-Metadaten aus der Bilddatei. Dazu gehören insbesondere GPS-Koordinaten, Geräteinformationen und Aufnahmezeitstempel. Die Bereinigung findet vollständig auf Ihrem Gerät statt.</p>
+            <p>Das Foto wird dabei auf maximal 2.048 Pixel Kantenlänge (Seitenverhältnis erhalten) skaliert und mit 90&nbsp;% JPEG-Qualität gespeichert. Eine Thumbnail-Version (max. 320 Pixel) wird ebenfalls lokal erstellt.</p>
+            <p>Da Fotos das Gerät nicht verlassen, dient die EXIF-Bereinigung als zusätzliche Schutzmaßnahme für den Fall eines Geräteverlustes oder eines unerwarteten Datenzugriffs.</p>
 
             <!-- ============================================================ -->
-            <!-- ABSCHNITT 6 – AUFBEWAHRUNG UND LÖSCHFRISTEN                  -->
+            <!-- ABSCHNITT 6 – KEIN TRACKING / KEINE ANALYTICS                -->
             <!-- ============================================================ -->
-            <h2>6. Speicherdauer und Löschfristen</h2>
+            <h2>6. Kein Tracking, keine Analytics</h2>
+            <p>Zeitkorn v1 enthält keinerlei aktives Tracking oder Analyse-Tools:</p>
             <ul>
-                <li><strong>Lokale Daten:</strong> Verbleiben auf Ihrem Gerät bis zur Nutzung der „Konto löschen"-Funktion oder Deinstallation der App.</li>
-                <li><strong>Cloud-Daten (Supabase):</strong> Werden bei Ausführung von „Konto löschen" (Art. 17 DSGVO) vollständig gelöscht. Soft-deleted Milestones werden durch einen nächtlichen Datenbankjob endgültig aus dem System entfernt.</li>
-                <li><strong>Fotos:</strong> Werden bei Konto-Löschung sowohl lokal als auch aus dem Supabase Storage entfernt.</li>
-                <li><strong>Authentifizierungstoken:</strong> Werden bei Konto-Löschung aus dem Keychain des Geräts gelöscht.</li>
+                <li>PostHog (Analyse-Bibliothek) ist zwar als Abhängigkeit in der App enthalten, wird aber nicht initialisiert. Der Einstiegspunkt in der App ist ein explizit leerer Stub — es werden null Byte Telemetrie gesendet.</li>
+                <li>Sentry (Crash-Reporting) ist ebenfalls nicht aktiv.</li>
+                <li>Es gibt kein Advertising-ID-Tracking und kein Fingerprinting.</li>
             </ul>
+            <p>Sollten künftige Versionen optionale Analytics-Funktionen einführen, wird dies ausschließlich nach expliziter Einwilligung geschehen, und Babydaten werden in keinem Fall an Analyse-Dienste übermittelt.</p>
 
             <!-- ============================================================ -->
-            <!-- ABSCHNITT 7 – BETROFFENENRECHTE                              -->
+            <!-- ABSCHNITT 7 – KEINE AUFTRAGSVERARBEITER FÜR APP-DATEN        -->
             <!-- ============================================================ -->
-            <h2>7. Ihre Rechte als betroffene Person</h2>
-            <p>Sie haben nach DSGVO folgende Rechte:</p>
-            <ul>
-                <li><strong>Auskunft (Art. 15):</strong> Sie können jederzeit Auskunft über die gespeicherten Daten verlangen.</li>
-                <li><strong>Berichtigung (Art. 16):</strong> Sie können unrichtige Daten direkt in der App korrigieren.</li>
-                <li><strong>Löschung / Recht auf Vergessenwerden (Art. 17):</strong> In den Einstellungen der App unter „Konto löschen" werden alle personenbezogenen Daten lokal und auf dem Server vollständig gelöscht.</li>
-                <li><strong>Datenportabilität / Export (Art. 20):</strong> In den Einstellungen unter „Daten exportieren" können Sie alle Ihre Daten als ZIP-Archiv (manifest.json + Fotos) herunterladen und weiterverwenden.</li>
-                <li><strong>Widerspruch (Art. 21):</strong> Sofern Daten auf Grundlage berechtigter Interessen verarbeitet werden, können Sie widersprechen.</li>
-                <li><strong>Einwilligung widerrufen (Art. 7 Abs. 3):</strong> Erteilte Einwilligungen (z. B. für Analytics) können jederzeit widerrufen werden, ohne dass die Rechtmäßigkeit der bisherigen Verarbeitung berührt wird.</li>
-                <li><strong>Beschwerde bei einer Aufsichtsbehörde (Art. 77):</strong> Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. In Deutschland ist dies z. B. die zuständige Landesbehörde oder der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI).</li>
-            </ul>
+            <h2>7. Auftragsverarbeiter</h2>
+            <p>Da Zeitkorn v1 keine App-Inhalte an Server überträgt, gibt es für Babydaten, Meilensteine und Fotos keine Auftragsverarbeiter im Sinne von Art. 28 DSGVO.</p>
+            <p>Zwei Dienste haben eine eingeschränkte, indirekte Berührung:</p>
 
-            <p>Zur Ausübung Ihrer Rechte (soweit nicht direkt in der App möglich) wenden Sie sich bitte an: <a href="mailto:an.creat1985@gmail.com">an.creat1985@gmail.com</a>.</p>
-
-            <!-- ============================================================ -->
-            <!-- ABSCHNITT 8 – AUFTRAGSVERARBEITER                            -->
-            <!-- ============================================================ -->
-            <h2>8. Auftragsverarbeiter (Art. 28 DSGVO)</h2>
-            <p>Wir setzen folgende Dienstleister ein, mit denen Auftragsverarbeitungsverträge (AVV) abgeschlossen sind bzw. werden:</p>
-
-            <h3>8.1 App-Datenspeicherung: Supabase</h3>
-            <p><strong>Rolle:</strong> Cloud-Backend für Nutzerdaten (Babies, Meilensteine, Fotos, Einwilligungen).</p>
-            <p><strong>Region:</strong> EU (Frankfurt, Deutschland). Keine Drittlandsübertragung.</p>
-            <p><strong>Datenschutzseite:</strong> <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></p>
-
-            <h3>8.2 Anonyme Analytics: PostHog (noch nicht aktiv)</h3>
-            <p><strong>Rolle:</strong> Anonymisierte Nutzungsanalyse (erst nach Einwilligung).</p>
-            <p><strong>Region:</strong> EU-Hosting (PostHog Cloud EU). Babydaten werden ausdrücklich nicht übermittelt.</p>
-            <p><strong>Datenschutzseite:</strong> <a href="https://posthog.com/privacy" target="_blank" rel="noopener">posthog.com/privacy</a></p>
-
-            <h3>8.3 Legal-Site-Hosting: Vercel</h3>
-            <p><strong>Rolle:</strong> Hosting dieser Datenschutzseite (statische HTML-Dateien).</p>
-            <p><strong>Hinweis:</strong> Vercel erfasst Server-Logs (IP-Adresse, Zeitstempel) gemäß eigener Datenschutzrichtlinie. Diese Daten stehen in keinem Zusammenhang mit Ihren App-Inhaltsdaten.</p>
-            <p><strong>Datenschutzseite:</strong> <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a></p>
-
-            <h3>8.4 App-Vertrieb: Apple App Store</h3>
-            <p><strong>Rolle:</strong> Vertriebsplattform (App Store), Transaktionsabwicklung (Kauf), ggf. Sign in with Apple.</p>
+            <h3>Apple App Store</h3>
+            <p><strong>Rolle:</strong> Auslieferungsplattform und Kaufabwicklung. Apple verarbeitet Ihre Zahlungs- und Apple-ID-Daten beim Kauf nach eigener Datenschutzrichtlinie. Diese Daten liegen ausschließlich bei Apple und nicht bei uns.</p>
             <p><strong>Datenschutzseite:</strong> <a href="https://www.apple.com/de/privacy/" target="_blank" rel="noopener">apple.com/de/privacy</a></p>
 
-            <!-- ============================================================ -->
-            <!-- ABSCHNITT 9 – INTERNATIONALE ÜBERTRAGUNGEN                   -->
-            <!-- ============================================================ -->
-            <h2>9. Internationale Datenübertragungen</h2>
-            <p>Supabase und PostHog (wenn aktiviert) hosten Ihre Daten in der EU (Frankfurt). Eine Übertragung in Drittländer findet für diese Dienste nicht statt.</p>
-            <p>Apple als App-Store-Betreiber unterliegt dem EU-US Data Privacy Framework für seine Dienste. Weitere Informationen entnehmen Sie der Apple-Datenschutzrichtlinie.</p>
-            <p><strong>UK und Schweiz:</strong> Diese Datenschutzerklärung orientiert sich an der DSGVO. UK-Nutzer (UK GDPR) und Schweizer Nutzer (nDSG) können ebenfalls von den beschriebenen Betroffenenrechten Gebrauch machen; spezifische nationale Anforderungen können abweichen.</p>
+            <h3>Vercel (nur diese Legal-Seite)</h3>
+            <p><strong>Rolle:</strong> Hosting dieser Datenschutzseite (statische HTML-Dateien, keinerlei Zusammenhang mit App-Inhalten). Vercel erfasst Server-Logs (IP-Adresse, Zeitstempel), wenn Sie diese Webseite aufrufen.</p>
+            <p><strong>Datenschutzseite:</strong> <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a></p>
 
             <!-- ============================================================ -->
-            <!-- ABSCHNITT 10 – KINDERDATEN                                   -->
+            <!-- ABSCHNITT 8 – KEINE INTERNATIONALEN ÜBERTRAGUNGEN             -->
             <!-- ============================================================ -->
-            <h2>10. Daten von Kleinkindern</h2>
+            <h2>8. Keine Übertragung von App-Daten</h2>
+            <p>Da alle Daten ausschließlich lokal auf Ihrem Gerät verbleiben, findet keine Übertragung in Drittländer oder an Server statt. Es gibt keine internationalen Datentransfers Ihrer App-Inhalte.</p>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 9 – KINDERDATEN                                    -->
+            <!-- ============================================================ -->
+            <h2>9. Daten von Kleinkindern</h2>
             <div class="highlight-box">
                 <strong>Wichtiger Hinweis zu Kinderdaten</strong>
-                <p>Zeitkorn ist ausschließlich an erwachsene Eltern und Erziehungsberechtigte als Account-Inhaber gerichtet. Die App richtet sich <strong>nicht</strong> an Kinder im Sinne von Art. 8 DSGVO (in Deutschland: Kinder unter 16 Jahren) als Nutzer. Kinderdaten (Name, Geburtsdatum, Fotos) werden ausschließlich durch erwachsene Account-Inhaber für die persönliche, familiäre Nutzung eingegeben und gespeichert.</p>
-                <p>Diese Daten werden zu keinem Zeitpunkt für Werbezwecke, Profilerstellung oder Weitergabe an Dritte genutzt.</p>
+                <p>Zeitkorn ist ausschließlich an erwachsene Eltern und Erziehungsberechtigte als Nutzer gerichtet. Die App richtet sich <strong>nicht</strong> an Kinder im Sinne von Art. 8 DSGVO (in Deutschland: Kinder unter 16 Jahren) als Nutzer.</p>
+                <p>Kinderdaten (Name, Geburtsdatum, Fotos) werden ausschließlich durch erwachsene Nutzer für die persönliche, familiäre Nutzung eingegeben — und bleiben lokal auf dem Gerät. Diese Daten werden zu keinem Zeitpunkt für Werbezwecke, Profilerstellung oder zur Weitergabe an Dritte genutzt oder übermittelt.</p>
             </div>
 
             <!-- ============================================================ -->
-            <!-- ABSCHNITT 11 – ANALYTICS-MINIMIERUNG                         -->
+            <!-- ABSCHNITT 10 – SPEICHERDAUER                                 -->
             <!-- ============================================================ -->
-            <h2>11. Analytics-Minimierung</h2>
-            <p>PostHog ist in der aktuellen App-Version <strong>nicht aktiv</strong>. Der Quellcode enthält zwar die PostHog-Bibliothek, jedoch ist die Initialisierung ein expliziter No-Op-Stub (gemäß DSGVO Art. 9: null Telemetrie vor Einwilligung).</p>
-            <p>Sollte eine künftige Version Analytics aktivieren, gilt:</p>
+            <h2>10. Speicherdauer</h2>
+            <p>Alle Daten verbleiben auf Ihrem Gerät, solange Sie die App nutzen. Sie können alle Daten jederzeit löschen:</p>
             <ul>
-                <li>Nur anonymisierte Ereignisse (z. B. „Meilenstein erfasst", „Export gestartet") ohne nutzergenerierten Inhalt.</li>
-                <li>Keine Babynamen, Geburtsdaten, Fotos, Notizen oder sonstige inhaltsbezogene Daten an PostHog.</li>
-                <li>Aktivierung ausschließlich nach expliziter Einwilligung in der App.</li>
-                <li>PostHog EU-Hosting (Frankfurt) – keine Übertragung außerhalb der EU.</li>
+                <li><strong>Einzelne Meilensteine oder Babys:</strong> Können direkt in der App gelöscht werden.</li>
+                <li><strong>Alle Daten auf einmal:</strong> Einstellungen → „Konto löschen" löscht alle persönlichen Daten aus der App-Datenbank und alle Foto-Dateien vom Gerät.</li>
+                <li><strong>Vollständige Entfernung:</strong> Durch Deinstallation der App werden alle lokal gespeicherten Daten vom Gerät entfernt.</li>
             </ul>
 
             <!-- ============================================================ -->
-            <!-- ABSCHNITT 12 – LÖSCH- UND EXPORTMECHANIK                     -->
+            <!-- ABSCHNITT 11 – IHRE RECHTE ALS BETROFFENE PERSON             -->
             <!-- ============================================================ -->
-            <h2>12. Lösch- und Exportfunktionen in der App</h2>
-
-            <h3>12.1 Konto löschen (Art. 17 DSGVO)</h3>
-            <p>Unter Einstellungen → „Konto löschen" werden folgende Daten gelöscht:</p>
+            <h2>11. Ihre Rechte als betroffene Person</h2>
+            <p>Da alle Daten lokal auf Ihrem Gerät liegen und Sie vollständige Kontrolle darüber haben, können Sie die meisten Betroffenenrechte direkt in der App ausüben:</p>
             <ul>
-                <li>Alle lokalen Datenbankzeilen: Babies, Milestones, Fotos, Einwilligungen, Synchronisierungswarteschlange, App-Metadaten</li>
-                <li>Alle Foto- und Thumbnail-Dateien auf dem Gerät</li>
-                <li>Sitzungstoken im Keychain</li>
-                <li>Supabase-Session (Abmeldung vom Server)</li>
+                <li><strong>Auskunft (Art. 15):</strong> Alle gespeicherten Daten sind in der App direkt einsehbar.</li>
+                <li><strong>Berichtigung (Art. 16):</strong> Babydaten und Meilensteine können jederzeit in der App bearbeitet werden.</li>
+                <li><strong>Löschung / Recht auf Vergessenwerden (Art. 17):</strong> Einstellungen → „Konto löschen" entfernt alle persönlichen Daten aus der App-Datenbank sowie alle Foto- und Thumbnail-Dateien vom Gerät. Die Funktion löscht vollständig und ist nicht rückgängig zu machen.</li>
+                <li><strong>Datenportabilität / Export (Art. 20):</strong> Einstellungen → „Daten exportieren" erstellt ein ZIP-Archiv (manifest.json + Fotos), das alle Ihre Daten in einem offenen Format enthält. Das Archiv enthält keine absoluten Gerätepfade.</li>
+                <li><strong>Einschränkung der Verarbeitung (Art. 18):</strong> Da keine externe Verarbeitung stattfindet, liegt die Einschränkung in Ihrer Kontrolle über die App.</li>
+                <li><strong>Widerspruch (Art. 21):</strong> Da die Verarbeitung ausschließlich auf Vertragserfüllung basiert und alle Daten lokal bleiben, ist ein Widerspruch nicht praxisrelevant.</li>
+                <li><strong>Beschwerde bei einer Aufsichtsbehörde (Art. 77):</strong> Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, z. B. beim Bundesbeauftragten für den Datenschutz und die Informationsfreiheit (BfDI) oder der zuständigen Landesbehörde.</li>
             </ul>
-            <p>Ausgenommen von der Löschung sind Meilenstein-Vorlagen (nicht-personenbezogener Katalog, wird beim nächsten App-Start neu befüllt).</p>
+            <p>Für Fragen, die nicht direkt in der App lösbar sind, wenden Sie sich bitte an: <a href="mailto:an.creat1985@gmail.com">an.creat1985@gmail.com</a>.</p>
 
-            <h3>12.2 Datenexport (Art. 20 DSGVO)</h3>
-            <p>Unter Einstellungen → „Daten exportieren" wird ein ZIP-Archiv erstellt, das enthält:</p>
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 12 – DATENSICHERHEIT                               -->
+            <!-- ============================================================ -->
+            <h2>12. Datensicherheit</h2>
+            <p>Da alle Daten lokal auf Ihrem Gerät verbleiben, greifen die Sicherheitsmechanismen von iOS:</p>
             <ul>
-                <li><code>manifest.json</code>: alle Babydaten, Meilensteine, Fotometadaten, Einwilligungen im JSON-Format</li>
-                <li><code>photos/</code>: alle lokal vorhandenen Fotos (EXIF-bereinigt)</li>
+                <li>Geräteverschlüsselung (Data Protection API)</li>
+                <li>App-Sandboxing (andere Apps können nicht auf Zeitkorn-Daten zugreifen)</li>
+                <li>Face ID / Touch ID Geräteschutz (durch das Betriebssystem)</li>
             </ul>
-            <p>Das Archiv enthält keine absoluten Gerätepfade und keine internen Systemdaten.</p>
 
             <!-- ============================================================ -->
-            <!-- ABSCHNITT 13 – ÄNDERUNGEN                                    -->
+            <!-- ABSCHNITT 13 – MÖGLICHE KÜNFTIGE FUNKTIONEN                  -->
             <!-- ============================================================ -->
-            <h2>13. Änderungen dieser Datenschutzerklärung</h2>
-            <p>Wir können diese Datenschutzerklärung bei wesentlichen Änderungen der App oder der Datenlage aktualisieren. Das Datum der letzten Änderung ist oben auf dieser Seite vermerkt. Wesentliche Änderungen werden in der App kommuniziert.</p>
+            <h2>13. Mögliche künftige Funktionen</h2>
+            <p>Zukünftige Versionen könnten optionale Funktionen einführen, bei denen Daten das Gerät verlassen — z. B. eine freiwillige Cloud-Synchronisierung oder ein optionales Benutzerkonto. Solche Funktionen werden, sofern eingeführt, ausschließlich optional sein, und diese Datenschutzerklärung wird vor Einführung entsprechend aktualisiert.</p>
+            <p>Diese Datenschutzerklärung beschreibt ausschließlich den Ist-Zustand von Zeitkorn v1.</p>
 
             <!-- ============================================================ -->
-            <!-- ABSCHNITT 14 – KONTAKT                                       -->
+            <!-- ABSCHNITT 14 – ÄNDERUNGEN                                    -->
             <!-- ============================================================ -->
-            <h2>14. Kontakt</h2>
-            <p>Bei Fragen zum Datenschutz oder zur Ausübung Ihrer Betroffenenrechte wenden Sie sich bitte an:</p>
+            <h2>14. Änderungen dieser Datenschutzerklärung</h2>
+            <p>Bei wesentlichen Änderungen der App oder der Datenpraktiken wird diese Datenschutzerklärung aktualisiert. Das Datum der letzten Änderung ist oben auf dieser Seite vermerkt. Wesentliche Änderungen werden in der App kommuniziert.</p>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 15 – KONTAKT                                       -->
+            <!-- ============================================================ -->
+            <h2>15. Kontakt</h2>
+            <p>Bei Fragen zum Datenschutz wenden Sie sich bitte an:</p>
             <p>
                 <strong>André Jaszka</strong><br>
                 E-Mail: <a href="mailto:an.creat1985@gmail.com">an.creat1985@gmail.com</a>
