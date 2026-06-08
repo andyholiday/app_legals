@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung – Zeitkorn</title>
+    <meta name="description" content="Datenschutzerklärung für die Zeitkorn App.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f5f5f7;
+            --text-primary: #1d1d1f;
+            --text-secondary: #86868b;
+            --accent: #0071e3;
+            --border: #d2d2d7;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #000000;
+                --bg-secondary: #1d1d1f;
+                --text-primary: #f5f5f7;
+                --text-secondary: #86868b;
+                --accent: #2997ff;
+                --border: #424245;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin-left: 24px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+        }
+
+        .content {
+            padding: 60px 0;
+            flex: 1;
+        }
+
+        .content h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .meta {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 48px;
+        }
+
+        .content h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+
+        .content h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        .content p {
+            margin-bottom: 16px;
+        }
+
+        .content ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .content a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+
+        .highlight-box strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .placeholder-box {
+            background: #fff3cd;
+            border: 2px dashed #ffc107;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 24px 0;
+            color: #664d03;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .placeholder-box {
+                background: #332700;
+                border-color: #ffc107;
+                color: #ffe083;
+            }
+        }
+
+        .placeholder-box strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin: 0 16px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.8125rem;
+        }
+
+        @media (max-width: 640px) {
+            .content {
+                padding: 40px 0;
+            }
+
+            .content h1 {
+                font-size: 1.75rem;
+            }
+
+            nav a {
+                margin-left: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <span class="logo">Zeitkorn</span>
+            <nav>
+                <a href="privacy-en.html" hreflang="en">English</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="container">
+            <h1>Datenschutzerklärung</h1>
+            <p class="meta">Zeitkorn App &bull; Stand: Juni 2025</p>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 1 – VERANTWORTLICHER                               -->
+            <!-- ============================================================ -->
+            <h2>1. Verantwortliche Person</h2>
+
+            <p>Verantwortlich im Sinne der DSGVO (Art. 4 Nr. 7) ist:</p>
+            <p>
+                <strong>André Jaszka</strong><br>
+                E-Mail: <a href="mailto:an.creat1985@gmail.com">an.creat1985@gmail.com</a>
+            </p>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 2 – DATENKATEGORIEN                                -->
+            <!-- ============================================================ -->
+            <h2>2. Welche Daten werden verarbeitet?</h2>
+
+            <h3>2.1 Accountdaten</h3>
+            <p>Für die optionale Cloud-Synchronisierung (Supabase) können folgende Daten erfasst werden:</p>
+            <ul>
+                <li>E-Mail-Adresse (bei E-Mail-Registrierung)</li>
+                <li>Authentifizierungstoken (session token, im Keychain des Geräts gespeichert)</li>
+                <li>Apple-ID-Kennung (bei Sign in with Apple, sobald aktiviert)</li>
+            </ul>
+            <p>Alle App-Inhalte können auch vollständig lokal – ohne Account – genutzt werden.</p>
+
+            <h3>2.2 Inhaltsdaten (nutzergeneriert)</h3>
+            <p>Diese Daten werden nur von Ihnen selbst erfasst und lokal gespeichert (optional per Cloud synchronisiert):</p>
+            <ul>
+                <li>Name des Kindes</li>
+                <li>Geburtsdatum und optional Geburtsort sowie Geburtsmaße (Größe, Gewicht)</li>
+                <li>Optionales Geschlecht</li>
+                <li>Meilensteine: Datum, Kategorie, Titel, Notiz, Sticker-ID</li>
+                <li>Fotos zu Meilensteinen (EXIF-bereinigt vor Speicherung, siehe Abschnitt 5)</li>
+            </ul>
+
+            <h3>2.3 Einwilligungsdaten</h3>
+            <p>Die App protokolliert Ihre Einwilligungen (z. B. für künftige Analytics) mit Zeitstempel, Typ und Status – lokal und optional auf dem Server.</p>
+
+            <h3>2.4 Technische Betriebsdaten</h3>
+            <p>Intern verwendete, nicht-personenbezogene Betriebsdaten:</p>
+            <ul>
+                <li>Synchronisierungswarteschlange (lokale Queue, nie direkt übertragen)</li>
+                <li>App-Metadaten (z. B. Zeitpunkt der letzten Synchronisierung, anonyme Geräte-ID)</li>
+                <li>Einstellungen (Sprache, Farbschema, Anzeigemodus) – reine UI-Präferenzen, kein Personenbezug</li>
+            </ul>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 3 – ZWECKE UND RECHTSGRUNDLAGEN                    -->
+            <!-- ============================================================ -->
+            <h2>3. Zwecke und Rechtsgrundlagen der Verarbeitung</h2>
+
+            <h3>3.1 App-Betrieb und Meilenstein-Dokumentation</h3>
+            <p><strong>Zweck:</strong> Speicherung und Anzeige der von Ihnen eingegebenen Inhaltsdaten (Meilensteine, Fotos, Babydaten).</p>
+            <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung / vorvertragliche Maßnahme) – die Verarbeitung ist für die Erfüllung des Nutzungsvertrags (App-Kauf) erforderlich.</p>
+
+            <h3>3.2 Cloud-Synchronisierung (optional)</h3>
+            <p><strong>Zweck:</strong> Geräteübergreifende Synchronisierung Ihrer Daten über Supabase (EU-Server, Frankfurt).</p>
+            <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) – Sie aktivieren diese Funktion bewusst.</p>
+
+            <h3>3.3 Anonyme Nutzungsanalyse (PostHog – noch nicht aktiv)</h3>
+            <p><strong>Zweck:</strong> Verbesserung der App-Qualität durch anonymisierte Nutzungsereignisse.</p>
+            <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) – PostHog wird erst nach expliziter Einwilligung initialisiert. Babydaten (Name, Geburtsdatum, Fotos, Meilenstein-Texte) werden <strong>niemals</strong> an PostHog übermittelt.</p>
+            <p><strong>Aktueller Status:</strong> PostHog ist in der aktuellen App-Version nicht aktiv. Die Bibliothek ist vorhanden, jedoch ist die Initialisierung im Code als explizit deaktivierter Stub implementiert (GDPR Art. 9, kein Telemetrie vor Einwilligung). Eine künftige Version kann anonymisierte Ereignisse senden, sofern Sie einwilligen.</p>
+
+            <h3>3.4 Crash-Berichte (Sentry – noch nicht aktiv)</h3>
+            <p><strong>Zweck:</strong> Fehlererkennung und -behebung zur Verbesserung der App-Stabilität.</p>
+            <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) – ebenfalls noch nicht aktiv, gleiche Consent-Gate-Logik wie PostHog.</p>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 4 – EU-SPEICHERUNG                                 -->
+            <!-- ============================================================ -->
+            <h2>4. Speicherort – EU-Region</h2>
+
+            <div class="highlight-box">
+                <strong>Ihre Cloud-Daten verbleiben in der EU.</strong>
+                Soweit Sie die Cloud-Synchronisierung nutzen, werden Ihre Daten auf Supabase-Servern in der Region EU (Frankfurt, Deutschland) gespeichert. Es findet keine Übertragung in Drittländer außerhalb des EWR statt, ohne dass geeignete Garantien vorliegen.
+            </div>
+
+            <p>Fotos werden lokal auf Ihrem Gerät gespeichert und – sofern aktiviert – EXIF-bereinigt in den Supabase Storage-Bucket desselben EU-Projekts hochgeladen.</p>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 5 – EXIF-BEREINIGUNG                               -->
+            <!-- ============================================================ -->
+            <h2>5. EXIF-Bereinigung bei Fotos</h2>
+            <p>Bevor ein Foto gespeichert oder hochgeladen wird, entfernt die App sämtliche EXIF-Metadaten aus der Bilddatei. Dazu gehören insbesondere GPS-Koordinaten, Geräteinformationen und Aufnahmezeitstempel. Die Bereinigung findet auf Ihrem Gerät statt, bevor die Bytes das Gerät verlassen.</p>
+            <p>Das Foto wird auf maximal 2.048 Pixel Kantenlänge skaliert (Seitenverhältnis bleibt erhalten) und mit 90&nbsp;% JPEG-Qualität gespeichert. Eine Thumbnail-Version (max. 320 Pixel) wird ebenfalls lokal erstellt.</p>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 6 – AUFBEWAHRUNG UND LÖSCHFRISTEN                  -->
+            <!-- ============================================================ -->
+            <h2>6. Speicherdauer und Löschfristen</h2>
+            <ul>
+                <li><strong>Lokale Daten:</strong> Verbleiben auf Ihrem Gerät bis zur Nutzung der „Konto löschen"-Funktion oder Deinstallation der App.</li>
+                <li><strong>Cloud-Daten (Supabase):</strong> Werden bei Ausführung von „Konto löschen" (Art. 17 DSGVO) vollständig gelöscht. Soft-deleted Milestones werden durch einen nächtlichen Datenbankjob endgültig aus dem System entfernt.</li>
+                <li><strong>Fotos:</strong> Werden bei Konto-Löschung sowohl lokal als auch aus dem Supabase Storage entfernt.</li>
+                <li><strong>Authentifizierungstoken:</strong> Werden bei Konto-Löschung aus dem Keychain des Geräts gelöscht.</li>
+            </ul>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 7 – BETROFFENENRECHTE                              -->
+            <!-- ============================================================ -->
+            <h2>7. Ihre Rechte als betroffene Person</h2>
+            <p>Sie haben nach DSGVO folgende Rechte:</p>
+            <ul>
+                <li><strong>Auskunft (Art. 15):</strong> Sie können jederzeit Auskunft über die gespeicherten Daten verlangen.</li>
+                <li><strong>Berichtigung (Art. 16):</strong> Sie können unrichtige Daten direkt in der App korrigieren.</li>
+                <li><strong>Löschung / Recht auf Vergessenwerden (Art. 17):</strong> In den Einstellungen der App unter „Konto löschen" werden alle personenbezogenen Daten lokal und auf dem Server vollständig gelöscht.</li>
+                <li><strong>Datenportabilität / Export (Art. 20):</strong> In den Einstellungen unter „Daten exportieren" können Sie alle Ihre Daten als ZIP-Archiv (manifest.json + Fotos) herunterladen und weiterverwenden.</li>
+                <li><strong>Widerspruch (Art. 21):</strong> Sofern Daten auf Grundlage berechtigter Interessen verarbeitet werden, können Sie widersprechen.</li>
+                <li><strong>Einwilligung widerrufen (Art. 7 Abs. 3):</strong> Erteilte Einwilligungen (z. B. für Analytics) können jederzeit widerrufen werden, ohne dass die Rechtmäßigkeit der bisherigen Verarbeitung berührt wird.</li>
+                <li><strong>Beschwerde bei einer Aufsichtsbehörde (Art. 77):</strong> Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. In Deutschland ist dies z. B. die zuständige Landesbehörde oder der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI).</li>
+            </ul>
+
+            <p>Zur Ausübung Ihrer Rechte (soweit nicht direkt in der App möglich) wenden Sie sich bitte an: <a href="mailto:an.creat1985@gmail.com">an.creat1985@gmail.com</a>.</p>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 8 – AUFTRAGSVERARBEITER                            -->
+            <!-- ============================================================ -->
+            <h2>8. Auftragsverarbeiter (Art. 28 DSGVO)</h2>
+            <p>Wir setzen folgende Dienstleister ein, mit denen Auftragsverarbeitungsverträge (AVV) abgeschlossen sind bzw. werden:</p>
+
+            <h3>8.1 App-Datenspeicherung: Supabase</h3>
+            <p><strong>Rolle:</strong> Cloud-Backend für Nutzerdaten (Babies, Meilensteine, Fotos, Einwilligungen).</p>
+            <p><strong>Region:</strong> EU (Frankfurt, Deutschland). Keine Drittlandsübertragung.</p>
+            <p><strong>Datenschutzseite:</strong> <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></p>
+
+            <h3>8.2 Anonyme Analytics: PostHog (noch nicht aktiv)</h3>
+            <p><strong>Rolle:</strong> Anonymisierte Nutzungsanalyse (erst nach Einwilligung).</p>
+            <p><strong>Region:</strong> EU-Hosting (PostHog Cloud EU). Babydaten werden ausdrücklich nicht übermittelt.</p>
+            <p><strong>Datenschutzseite:</strong> <a href="https://posthog.com/privacy" target="_blank" rel="noopener">posthog.com/privacy</a></p>
+
+            <h3>8.3 Legal-Site-Hosting: Vercel</h3>
+            <p><strong>Rolle:</strong> Hosting dieser Datenschutzseite (statische HTML-Dateien).</p>
+            <p><strong>Hinweis:</strong> Vercel erfasst Server-Logs (IP-Adresse, Zeitstempel) gemäß eigener Datenschutzrichtlinie. Diese Daten stehen in keinem Zusammenhang mit Ihren App-Inhaltsdaten.</p>
+            <p><strong>Datenschutzseite:</strong> <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a></p>
+
+            <h3>8.4 App-Vertrieb: Apple App Store</h3>
+            <p><strong>Rolle:</strong> Vertriebsplattform (App Store), Transaktionsabwicklung (Kauf), ggf. Sign in with Apple.</p>
+            <p><strong>Datenschutzseite:</strong> <a href="https://www.apple.com/de/privacy/" target="_blank" rel="noopener">apple.com/de/privacy</a></p>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 9 – INTERNATIONALE ÜBERTRAGUNGEN                   -->
+            <!-- ============================================================ -->
+            <h2>9. Internationale Datenübertragungen</h2>
+            <p>Supabase und PostHog (wenn aktiviert) hosten Ihre Daten in der EU (Frankfurt). Eine Übertragung in Drittländer findet für diese Dienste nicht statt.</p>
+            <p>Apple als App-Store-Betreiber unterliegt dem EU-US Data Privacy Framework für seine Dienste. Weitere Informationen entnehmen Sie der Apple-Datenschutzrichtlinie.</p>
+            <p><strong>UK und Schweiz:</strong> Diese Datenschutzerklärung orientiert sich an der DSGVO. UK-Nutzer (UK GDPR) und Schweizer Nutzer (nDSG) können ebenfalls von den beschriebenen Betroffenenrechten Gebrauch machen; spezifische nationale Anforderungen können abweichen.</p>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 10 – KINDERDATEN                                   -->
+            <!-- ============================================================ -->
+            <h2>10. Daten von Kleinkindern</h2>
+            <div class="highlight-box">
+                <strong>Wichtiger Hinweis zu Kinderdaten</strong>
+                <p>Zeitkorn ist ausschließlich an erwachsene Eltern und Erziehungsberechtigte als Account-Inhaber gerichtet. Die App richtet sich <strong>nicht</strong> an Kinder im Sinne von Art. 8 DSGVO (in Deutschland: Kinder unter 16 Jahren) als Nutzer. Kinderdaten (Name, Geburtsdatum, Fotos) werden ausschließlich durch erwachsene Account-Inhaber für die persönliche, familiäre Nutzung eingegeben und gespeichert.</p>
+                <p>Diese Daten werden zu keinem Zeitpunkt für Werbezwecke, Profilerstellung oder Weitergabe an Dritte genutzt.</p>
+            </div>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 11 – ANALYTICS-MINIMIERUNG                         -->
+            <!-- ============================================================ -->
+            <h2>11. Analytics-Minimierung</h2>
+            <p>PostHog ist in der aktuellen App-Version <strong>nicht aktiv</strong>. Der Quellcode enthält zwar die PostHog-Bibliothek, jedoch ist die Initialisierung ein expliziter No-Op-Stub (gemäß DSGVO Art. 9: null Telemetrie vor Einwilligung).</p>
+            <p>Sollte eine künftige Version Analytics aktivieren, gilt:</p>
+            <ul>
+                <li>Nur anonymisierte Ereignisse (z. B. „Meilenstein erfasst", „Export gestartet") ohne nutzergenerierten Inhalt.</li>
+                <li>Keine Babynamen, Geburtsdaten, Fotos, Notizen oder sonstige inhaltsbezogene Daten an PostHog.</li>
+                <li>Aktivierung ausschließlich nach expliziter Einwilligung in der App.</li>
+                <li>PostHog EU-Hosting (Frankfurt) – keine Übertragung außerhalb der EU.</li>
+            </ul>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 12 – LÖSCH- UND EXPORTMECHANIK                     -->
+            <!-- ============================================================ -->
+            <h2>12. Lösch- und Exportfunktionen in der App</h2>
+
+            <h3>12.1 Konto löschen (Art. 17 DSGVO)</h3>
+            <p>Unter Einstellungen → „Konto löschen" werden folgende Daten gelöscht:</p>
+            <ul>
+                <li>Alle lokalen Datenbankzeilen: Babies, Milestones, Fotos, Einwilligungen, Synchronisierungswarteschlange, App-Metadaten</li>
+                <li>Alle Foto- und Thumbnail-Dateien auf dem Gerät</li>
+                <li>Sitzungstoken im Keychain</li>
+                <li>Supabase-Session (Abmeldung vom Server)</li>
+            </ul>
+            <p>Ausgenommen von der Löschung sind Meilenstein-Vorlagen (nicht-personenbezogener Katalog, wird beim nächsten App-Start neu befüllt).</p>
+
+            <h3>12.2 Datenexport (Art. 20 DSGVO)</h3>
+            <p>Unter Einstellungen → „Daten exportieren" wird ein ZIP-Archiv erstellt, das enthält:</p>
+            <ul>
+                <li><code>manifest.json</code>: alle Babydaten, Meilensteine, Fotometadaten, Einwilligungen im JSON-Format</li>
+                <li><code>photos/</code>: alle lokal vorhandenen Fotos (EXIF-bereinigt)</li>
+            </ul>
+            <p>Das Archiv enthält keine absoluten Gerätepfade und keine internen Systemdaten.</p>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 13 – ÄNDERUNGEN                                    -->
+            <!-- ============================================================ -->
+            <h2>13. Änderungen dieser Datenschutzerklärung</h2>
+            <p>Wir können diese Datenschutzerklärung bei wesentlichen Änderungen der App oder der Datenlage aktualisieren. Das Datum der letzten Änderung ist oben auf dieser Seite vermerkt. Wesentliche Änderungen werden in der App kommuniziert.</p>
+
+            <!-- ============================================================ -->
+            <!-- ABSCHNITT 14 – KONTAKT                                       -->
+            <!-- ============================================================ -->
+            <h2>14. Kontakt</h2>
+            <p>Bei Fragen zum Datenschutz oder zur Ausübung Ihrer Betroffenenrechte wenden Sie sich bitte an:</p>
+            <p>
+                <strong>André Jaszka</strong><br>
+                E-Mail: <a href="mailto:an.creat1985@gmail.com">an.creat1985@gmail.com</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy-de.html" hreflang="de">Deutsch</a>
+                <a href="privacy-en.html" hreflang="en">English</a>
+            </div>
+            <p class="copyright">&copy; 2025 André Jaszka. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+</body>
+</html>
