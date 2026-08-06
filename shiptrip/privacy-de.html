@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung – ShipTrip</title>
+    <meta name="description" content="Datenschutzerklärung für die ShipTrip iOS-App.">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --surface: #f5f5f7;
+            --text: #1d1d1f;
+            --muted: #6e6e73;
+            --accent: #0071e3;
+            --border: #d2d2d7;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #000000;
+                --surface: #1d1d1f;
+                --text: #f5f5f7;
+                --muted: #a1a1a6;
+                --accent: #2997ff;
+                --border: #424245;
+            }
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+        }
+        .container { width: min(760px, calc(100% - 40px)); margin: 0 auto; }
+        header { border-bottom: 1px solid var(--border); padding: 20px 0; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+        .logo { font-size: 1.25rem; font-weight: 700; }
+        nav a, main a, footer a { color: var(--accent); }
+        nav a { text-decoration: none; }
+        main { padding: 56px 0 72px; }
+        h1 { margin: 0 0 8px; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.1; letter-spacing: -0.03em; }
+        h2 { margin: 42px 0 14px; font-size: 1.3rem; line-height: 1.3; }
+        p, ul { margin: 0 0 16px; }
+        li { margin: 0 0 8px; }
+        .meta { color: var(--muted); margin-bottom: 36px; }
+        .summary { background: var(--surface); border-radius: 16px; padding: 24px; }
+        .summary strong { display: block; margin-bottom: 12px; }
+        .table-wrap { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; min-width: 620px; }
+        th, td { padding: 12px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+        th { font-size: 0.9rem; }
+        code { background: var(--surface); padding: 2px 5px; border-radius: 5px; }
+        footer { border-top: 1px solid var(--border); padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; }
+        @media (max-width: 560px) {
+            .header-content { align-items: flex-start; }
+            main { padding-top: 40px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <span class="logo">ShipTrip</span>
+            <nav><a href="privacy-en" hreflang="en">English</a></nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Datenschutzerklärung</h1>
+        <p class="meta">ShipTrip iOS-App · Zuletzt aktualisiert: 6. August 2026</p>
+
+        <h2>1. Verantwortlicher und Kontakt</h2>
+        <p>Verantwortlich für ShipTrip ist:</p>
+        <p><strong>André Jaszka</strong><br>E-Mail: <a href="mailto:privacy@jaszka.com">privacy@jaszka.com</a></p>
+
+        <h2>2. Das Wichtigste in Kürze</h2>
+        <div class="summary">
+            <strong>ShipTrip ist ohne Benutzerkonto nutzbar.</strong>
+            <ul>
+                <li>Der Entwickler betreibt keine eigenen Server.</li>
+                <li>Reisedaten werden auf Ihrem Gerät und bei verfügbarer iCloud-Anmeldung in Ihrem privaten Apple-CloudKit-Bereich gespeichert.</li>
+                <li>ShipTrip enthält keine Werbung, kein Tracking und keine Drittanbieter-Analytics-SDKs.</li>
+                <li>Kalender-Sync, lokale Erinnerungen, Fotoauswahl, Export/Import und der KI-Import über Google Gemini sind optional.</li>
+                <li>Der Gemini-Import funktioniert nur mit Ihrem eigenen API-Key und überträgt den von Ihnen eingefügten Text direkt an Google.</li>
+            </ul>
+        </div>
+
+        <h2>3. In ShipTrip verarbeitete Daten</h2>
+        <p>Je nach Nutzung verarbeitet ShipTrip insbesondere:</p>
+        <ul>
+            <li>Kreuzfahrttitel, Reisezeitraum, Reederei und Schiff</li>
+            <li>Kabinen- und Buchungsangaben</li>
+            <li>Routen, Häfen, Liegezeiten, Seetage und Ausflüge</li>
+            <li>Notizen, Bewertungen und Ausgaben</li>
+            <li>von Ihnen ausgewählte Reise- und Hafenfotos</li>
+            <li>Wunschreisen sowie eigene Reedereien und Schiffe</li>
+            <li>App-Einstellungen, Kalenderauswahl und Zuordnungen zu von ShipTrip erstellten Kalendereinträgen</li>
+            <li>einen optionalen Gemini-API-Key</li>
+        </ul>
+
+        <h2>4. Lokale Speicherung und privates iCloud/CloudKit</h2>
+        <p>ShipTrip speichert App-Daten lokal mit SwiftData. Wenn Sie auf dem Gerät bei iCloud angemeldet sind und iCloud für ShipTrip verfügbar ist, synchronisiert Apple diese Daten einschließlich hinzugefügter Fotos über den privaten CloudKit-Bereich Ihres Apple-Accounts. Der Entwickler betreibt hierfür keinen eigenen Server und kann auf diesen privaten CloudKit-Bereich nicht zugreifen.</p>
+        <p>Für die Verarbeitung durch Apple gelten die <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple-Datenschutzrichtlinien</a>.</p>
+
+        <h2>5. Optionaler KI-Import mit Google Gemini</h2>
+        <p>Der KI-Import ist standardmäßig nicht eingerichtet. Er wird erst verfügbar, wenn Sie in den Einstellungen einen eigenen Gemini-API-Key hinterlegen.</p>
+        <ul>
+            <li>Der API-Key wird in der iOS-Keychain mit der Einstellung <code>ThisDeviceOnly</code> gespeichert.</li>
+            <li>Bei der Key-Prüfung sendet ShipTrip einen kurzen Test-Prompt zusammen mit dem Key direkt an die Gemini API.</li>
+            <li>Bei jedem von Ihnen gestarteten KI-Import sendet ShipTrip den vollständigen Text, den Sie in das Importfeld eingefügt haben, sowie Anweisungen zur Datenextraktion direkt an Google. Fotos oder andere Dateien werden dabei nicht automatisch übertragen.</li>
+            <li>ShipTrip erhält weder Ihren API-Key noch den Buchungstext oder die Antwort von Google auf einem eigenen Server.</li>
+        </ul>
+        <p>Nach Googles aktuellen Angaben werden Prompts, Kontext und Ausgaben für die Missbrauchserkennung grundsätzlich 55 Tage gespeichert. Bei unbezahlten Diensten kann Google Eingaben und Ausgaben außerdem zur Verbesserung seiner Produkte verwenden; autorisierte menschliche Prüfer können Inhalte bearbeiten. Bei Paid Services werden Prompts und Antworten laut Google nicht zur Produktverbesserung verwendet, unterliegen aber weiterhin der Missbrauchsüberwachung und gegebenenfalls gesetzlichen Aufbewahrungspflichten.</p>
+        <p>Übermitteln Sie keine sensiblen, vertraulichen oder unnötigen personenbezogenen Daten. Es gelten die <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Additional Terms</a>, die <a href="https://ai.google.dev/gemini-api/docs/usage-policies" target="_blank" rel="noopener">Hinweise zur Missbrauchsüberwachung</a> und die <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google-Datenschutzrichtlinie</a>. Google verlangt für die API-Nutzung ein Mindestalter von 18 Jahren und für API-Clients im Europäischen Wirtschaftsraum, der Schweiz und dem Vereinigten Königreich einen Paid Service. Verwenden Sie die Gemini-Funktion nur, wenn Sie diese Voraussetzungen erfüllen.</p>
+
+        <h2>6. Optionaler Kalender-Sync und Erinnerungen</h2>
+        <p>Wenn Sie Kalender-Sync aktivieren, bittet ShipTrip um vollständigen Zugriff auf Kalenderereignisse. Die App zeigt beschreibbare Systemkalender zur Auswahl an und erstellt, aktualisiert oder entfernt darin ShipTrip-Termine mit Reisetiteln, Daten, Hafen-/Ortsangaben und appbezogenen Notizen. Abhängig vom gewählten Kalender kann das Betriebssystem diese Einträge an Apple oder einen anderen von Ihnen eingerichteten Kalenderanbieter synchronisieren. Für diese Verarbeitung gelten die Bedingungen des jeweiligen Anbieters. ShipTrip überträgt keine Kalenderdaten an eigene Server.</p>
+        <p>Reiseerinnerungen werden als lokale iOS-Mitteilungen auf dem Gerät geplant. ShipTrip verwendet dafür keinen eigenen Push-Server.</p>
+
+        <h2>7. Fotos</h2>
+        <p>ShipTrip erhält nur die Fotos, die Sie über den iOS-Fotoauswahldialog bewusst auswählen. Diese werden Bestandteil Ihrer App-Daten und können über Ihren privaten CloudKit-Bereich synchronisiert oder in einem von Ihnen erstellten Export enthalten sein.</p>
+
+        <h2>8. Export und Import</h2>
+        <p>Sie können Kreuzfahrten einschließlich der zugehörigen Fotos als ZIP-Archiv exportieren und ZIP- oder unterstützte JSON-Dateien importieren. Ein Export wird nur auf Ihre Anforderung erstellt und über das iOS-Teilen-Menü an ein von Ihnen gewähltes Ziel übergeben. Ab diesem Zeitpunkt bestimmen Sie und der gewählte Empfänger über die weitere Verarbeitung. Die temporäre Exportdatei wird nach Schließen des Teilen-Menüs entfernt; Kopien außerhalb der App müssen Sie selbst löschen.</p>
+
+        <h2>9. Empfänger und Diagnosedaten</h2>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Empfänger</th><th>Daten</th><th>Anlass</th></tr></thead>
+                <tbody>
+                    <tr><td>Apple iCloud/CloudKit</td><td>App-Daten einschließlich ausgewählter Fotos</td><td>Privater Geräte-Sync</td></tr>
+                    <tr><td>Gewählter Kalenderanbieter</td><td>Erstellte ShipTrip-Kalendereinträge</td><td>Nur bei aktiviertem Kalender-Sync</td></tr>
+                    <tr><td>Google Gemini API</td><td>API-Key, Test-Prompt bzw. eingefügter Buchungstext und Modellantwort</td><td>Nur bei selbst eingerichteter und aktiv verwendeter KI-Funktion</td></tr>
+                    <tr><td>Von Ihnen gewähltes Exportziel</td><td>Inhalte des ZIP-Exports</td><td>Nur bei selbst gestartetem Export</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>ShipTrip integriert keine Drittanbieter-Dienste für Werbung, Tracking oder Nutzungsanalyse. Apple kann abhängig von Ihren Geräte- und App-Store-Einstellungen Diagnose- und Absturzdaten verarbeiten und dem Entwickler bereitstellen.</p>
+
+        <h2>10. Speicherdauer und Löschung</h2>
+        <ul>
+            <li>App-Daten bleiben lokal und im privaten CloudKit-Bereich gespeichert, bis Sie sie löschen. Löschungen werden über CloudKit zwischen Ihren Geräten synchronisiert; für Apple-Backups und technische Aufbewahrung gelten Apples Bedingungen.</li>
+            <li>„Alle Daten löschen“ entfernt die in ShipTrip gespeicherten Reise- und Katalogdaten sowie geplante lokale Mitteilungen. Wenn ein Gemini-Key vorhanden ist, können Sie ausdrücklich wählen, ob er ebenfalls gelöscht werden soll. Er kann außerdem separat in den Einstellungen entfernt werden.</li>
+            <li>Von ShipTrip verwaltete Kalendereinträge können durch Deaktivieren des Kalender-Syncs entfernt werden, sofern der Kalenderzugriff noch erlaubt ist. Andernfalls löschen Sie die Einträge im jeweiligen Kalender oder erlauben den Zugriff vorübergehend erneut.</li>
+            <li>Exportierte Dateien und bei Kalender- oder Cloud-Anbietern gespeicherte Kopien müssen gegebenenfalls dort gelöscht werden.</li>
+            <li>Eine reine Deinstallation entfernt nicht zwingend Daten aus iCloud oder der iOS-Keychain. Nutzen Sie deshalb vor der Deinstallation die jeweiligen Löschfunktionen, wenn Sie diese Daten entfernen möchten.</li>
+            <li>Für Gemini gelten die von Google veröffentlichten Speicherfristen.</li>
+        </ul>
+
+        <h2>11. Ihre Rechte</h2>
+        <p>Soweit personenbezogene Daten durch einen Verantwortlichen verarbeitet werden, können Ihnen insbesondere Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Beschwerde bei einer Datenschutzaufsichtsbehörde zustehen. Da der Entwickler keinen Zugriff auf Ihren privaten lokalen oder CloudKit-Datenbestand hat, verwalten Sie diese Daten unmittelbar in der App beziehungsweise über Ihren Apple-Account.</p>
+
+        <h2>12. Änderungen</h2>
+        <p>Diese Erklärung kann bei Änderungen der App oder der beteiligten Dienste aktualisiert werden. Auf dieser Seite wird jeweils der aktuelle Stand veröffentlicht.</p>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><a href="privacy-en" hreflang="en">English version</a></p>
+            <p>&copy; 2026 André Jaszka · ShipTrip</p>
+        </div>
+    </footer>
+</body>
+</html>
