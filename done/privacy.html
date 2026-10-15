@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung - Done</title>
+    <meta name="description" content="Datenschutzerklärung für die Done App.">
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f5f5f7;
+            --text-primary: #1d1d1f;
+            --text-secondary: #86868b;
+            --accent: #0071e3;
+            --border: #d2d2d7;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #000000;
+                --bg-secondary: #1d1d1f;
+                --text-primary: #f5f5f7;
+                --text-secondary: #86868b;
+                --accent: #2997ff;
+                --border: #424245;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin-left: 24px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+        }
+
+        .content {
+            padding: 60px 0;
+            flex: 1;
+        }
+
+        .content h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .meta {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 48px;
+        }
+
+        .content h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+
+        .content p {
+            margin-bottom: 16px;
+        }
+
+        .content ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .content a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+
+        .highlight-box strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin: 0 16px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.8125rem;
+        }
+
+        @media (max-width: 640px) {
+            .content {
+                padding: 40px 0;
+            }
+
+            .content h1 {
+                font-size: 1.75rem;
+            }
+
+            nav a {
+                margin-left: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <span class="logo">Done</span>
+            <nav>
+                <a href="support.html">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="container">
+            <h1>Datenschutzerklärung</h1>
+            <p class="meta">Done App &bull; Stand: 15.10.2026</p>
+
+            <h2>1. Das Wichtigste in Kürze</h2>
+            <div class="highlight-box">
+                <strong>Deine Daten bleiben auf deinem iPhone.</strong>
+                Done braucht kein Konto und hat keinen Server. Wir bekommen deine Aufgaben nie zu sehen. Es gibt keine Werbung, keine Analyse und kein Tracking.
+            </div>
+
+            <h2>2. Welche Daten speichert Done?</h2>
+            <p>Done speichert nur, was du selbst eingibst oder einstellst:</p>
+            <ul>
+                <li><strong>Aufgaben:</strong> Titel, Minischritte, Listen, Termine und Erinnerungszeiten, erledigte Aufgaben</li>
+                <li><strong>Einstellungen:</strong> zum Beispiel Mitteilungen, Ruhezeit, Tageszeiten und Erscheinungsbild</li>
+                <li><strong>Name (freiwillig):</strong> wenn du in den Einstellungen einen Namen für die Anrede einträgst</li>
+            </ul>
+
+            <h2>3. Wo werden die Daten gespeichert?</h2>
+            <div class="highlight-box">
+                <strong>Nur lokal auf deinem Gerät</strong>
+                Alle Daten liegen in einem geschützten Speicherbereich auf deinem iPhone. Diesen Bereich teilen sich nur die App und das Done-Widget auf deinem Homebildschirm. Nichts davon wird an uns oder an andere übertragen.
+            </div>
+            <p>Die Daten sind durch die Dateiverschlüsselung von iOS geschützt.</p>
+            <p><strong>Backups:</strong> Wenn du ein iCloud-Backup oder ein Backup auf deinem Computer nutzt, können deine Done-Daten darin enthalten sein. Diese Backups richtest du selbst ein. Sie werden von Apple bzw. auf deinem eigenen Computer verwaltet, nicht von uns. Für iCloud gilt die <a href="https://www.apple.com/de/legal/privacy/" target="_blank" rel="noopener">Datenschutzrichtlinie von Apple</a>.</p>
+
+            <h2>4. Mitteilungen</h2>
+            <p>Erinnerungen und Hinweise plant Done direkt auf deinem iPhone. Es gibt keinen Push-Server. Mitteilungen erscheinen nur, wenn du sie in iOS erlaubst und in Done einschaltest. In den Einstellungen von Done legst du außerdem fest, ob Aufgabeninhalte in der Vorschau auf dem Sperrbildschirm zu sehen sind.</p>
+
+            <h2>5. Datenübertragung an Dritte</h2>
+            <p>Done überträgt keine Daten – weder an uns noch an Dritte. Es gibt:</p>
+            <ul>
+                <li>Kein Konto und keinen Server</li>
+                <li>Keine Werbung</li>
+                <li>Keine Analyse-Dienste</li>
+                <li>Kein Tracking</li>
+                <li>Keine Cookies</li>
+            </ul>
+
+            <h2>6. Download über den App Store</h2>
+            <p>Du lädst Done über den App Store von Apple. Dabei verarbeitet Apple Daten, zum Beispiel deine Apple-Account-Daten. Dafür ist Apple verantwortlich. Mehr dazu steht in der <a href="https://www.apple.com/de/legal/privacy/" target="_blank" rel="noopener">Datenschutzrichtlinie von Apple</a>.</p>
+
+            <h2>7. Daten löschen</h2>
+            <ul>
+                <li><strong>In der App:</strong> Einstellungen &rarr; Daten &rarr; „Alle lokalen Daten löschen“. Das entfernt alle Aufgaben, Listen, Einstellungen und geplanten Mitteilungen von Done.</li>
+                <li><strong>App löschen:</strong> Wenn du Done vom iPhone entfernst, löscht iOS alle lokalen Daten der App.</li>
+            </ul>
+            <p>Kopien in einem iCloud- oder Computer-Backup löscht Done nicht. Diese verwaltest du selbst.</p>
+
+            <h2>8. Deine Rechte</h2>
+            <p>Nach der Datenschutz-Grundverordnung (DSGVO) hast du das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Weil Done keine Daten an uns sendet, liegen uns keine Daten aus der App über dich vor. Du kannst deine Daten jederzeit selbst in der App einsehen, ändern und löschen.</p>
+            <p>Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.</p>
+            <p>Wenn du uns eine E-Mail schreibst, nutzen wir deine Adresse und deine Nachricht nur, um dir zu antworten.</p>
+
+            <h2>9. Änderungen dieser Datenschutzerklärung</h2>
+            <p>Wenn sich Done so ändert, dass diese Erklärung nicht mehr stimmt, passen wir sie an. Das aktuelle Datum steht oben auf dieser Seite.</p>
+
+            <h2>10. Kontakt</h2>
+            <p>Anbieter von Done: André Jaszka</p>
+            <p>Bei Fragen zum Datenschutz oder um deine Rechte geltend zu machen, schreib uns:</p>
+            <p><strong>E-Mail:</strong> <a href="mailto:privacy@jaszka.com">privacy@jaszka.com</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Datenschutz</a>
+                <a href="support.html">Support</a>
+            </div>
+            <p class="copyright">&copy; 2026 André Jaszka. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+</body>
+</html>

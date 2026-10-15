@@ -52,6 +52,7 @@ Support URLs.
 - **MeterSnap Support:** `/metersnap/support`
 - **ShipTrip Datenschutz:** `/shiptrip/privacy-de`
 - **ShipTrip Privacy:** `/shiptrip/privacy-en`
+- **Done Datenschutz / Support:** `/done/privacy`, `/done/support`
 
 Deploy: `vercel --prod` from the repo root.
 
