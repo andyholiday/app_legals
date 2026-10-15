@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datenschutzerklärung – Chip Stack</title>
+  <link rel="stylesheet" href="/chipstack/site.css">
+</head>
+<body>
+<main>
+  <p><a href="/chipstack/en/privacy" lang="en" hreflang="en">English</a></p>
+  <h1>Datenschutzerklärung</h1>
+  <p>Chip Stack ist eine kleine App, mit der eine private Pokerrunde ihre Termine,
+    die Host-Reihenfolge und den Verlauf organisiert. Hier steht, welche Daten dabei
+    anfallen, wo sie liegen und wie du sie wieder loswirst.</p>
+  <p>Stand: 15. Oktober 2026</p>
+
+  <h2 id="verantwortlicher">Verantwortlicher</h2>
+  <p>AppManufaktur<br>
+    Inh. André Jaszka<br>
+    Postfach 1130<br>
+    48318 Sendenhorst<br>
+    Deutschland<br>
+    E-Mail: privacy@jaszka.com</p>
+  <p>Diese Erklärung gilt für die Apps „Chip Stack“ für iOS und Android, die
+    Web-App unter chip-stack-eta.vercel.app, die Seiten unter chipstack.jahaus.de und die
+    Website unter app-legals.vercel.app/chipstack.
+    Die Web-App schalte ich ab, sobald die Apps für iOS und Android in den Stores sind;
+    die Website bleibt.</p>
+
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Es gibt <strong>kein Konto</strong>: keine E-Mail-Adresse, keine Telefonnummer,
+      kein Passwort.</li>
+    <li>Es gibt <strong>kein Tracking, keine Werbung und keine Analyse-Werkzeuge</strong>.</li>
+    <li>Die Daten liegen auf einem eigenen Server bei mir zu Hause in Deutschland.</li>
+    <li>Push-Mitteilungen sind freiwillig und nur aktiv, wenn du sie einschaltest.</li>
+  </ul>
+
+  <h2 id="zugang">So funktioniert der Zugang</h2>
+  <p>Wenn du eine Runde anlegst oder ihr mit einem Einladungscode beitrittst, erzeugt
+    der Server einen zufälligen Zugangsschlüssel für genau diese Mitgliedschaft. Dein
+    Gerät speichert ihn (in der App im geschützten Schlüsselspeicher des Systems, in der
+    Web-App im Speicher deines Browsers) und schickt ihn bei jeder Anfrage mit. Der
+    Server selbst speichert den Schlüssel nicht, sondern nur einen daraus berechneten
+    Prüfwert (SHA-256). Für jede Runde gibt es einen eigenen Schlüssel.</p>
+
+  <h2 id="daten">Welche Daten verarbeitet werden</h2>
+  <h3>Auf dem Server</h3>
+  <ul>
+    <li><strong>Deine Mitgliedschaft:</strong> der Name, den du in der Runde angibst
+      (zum Beispiel dein Vorname), eine zufällige Kennung deines Sitzes, deine Chip-Farbe,
+      deine Position in der Rotation, ob du gerade pausierst, ob du die Runde erstellt hast,
+      Beitritts- und gegebenenfalls Austrittszeitpunkt sowie der Prüfwert deines
+      Zugangsschlüssels.</li>
+    <li><strong>Daten der Runde:</strong> der Name der Runde, die Termine (Datum, Uhrzeit
+      und, wenn eingetragen, ein Ort), wer wann Host ist oder war, die Reihenfolge,
+      Ersatz-Hosts samt Rückgängig-Vorgängen, der Einladungscode und der Prüfwert des
+      Wiederherstellungscodes.</li>
+    <li><strong>Mitteilungsverlauf:</strong> Ereignisse der Runde (zum Beispiel „Termin
+      geändert“ oder „ist beigetreten“) mit den Kennungen der beteiligten Sitze, dazu je
+      Sitz, bis wohin du gelesen, geleert oder einzelne Einträge ausgeblendet hast.
+      Die Texte mit Namen entstehen erst beim Anzeigen aus den aktuellen Namen.</li>
+    <li><strong>Push-Token</strong> (nur wenn du Push-Mitteilungen einschaltest): eine
+      Zustelladresse für Mitteilungen auf deinem Gerät, die Plattform (iOS oder Android),
+      die Sprache deines Geräts (Deutsch oder Englisch, damit die Mitteilung in dieser
+      Sprache kommt) und wann sie angelegt und zuletzt bestätigt wurde, je
+      Mitgliedschaft.</li>
+    <li><strong>Protokoll des Servers:</strong> Für jede Anfrage werden eine zufällige
+      Anfrage-Kennung, die Methode (zum Beispiel GET), der aufgerufene Pfad und der
+      Antwortstatus protokolliert. Der Pfad kann die Kennung der Runde und von Sitzen
+      enthalten; Einladungscodes und Push-Token werden vorher unkenntlich gemacht. Deine
+      IP-Adresse, dein Browser oder Gerät und Inhalte werden nicht protokolliert. Fehler
+      werden mit technischer Fehlermeldung protokolliert, beim Versand von Mitteilungen
+      mit der Kennung der Runde.</li>
+    <li><strong>IP-Adresse, nur kurz:</strong> Zum Schutz vor Missbrauch (zum Beispiel
+      dem Durchprobieren von Codes) zählt der Server Anfragen je IP-Adresse. Diese
+      Zähler liegen nur im Arbeitsspeicher. Jeder Zähler gilt höchstens 24 Stunden; danach
+      löscht der Server ihn samt IP-Adresse innerhalb einer Minute. Nach einem Neustart
+      sind alle Zähler weg.</li>
+  </ul>
+  <h3>Nur auf deinem Gerät</h3>
+  <ul>
+    <li>deine Mitgliedschaften (Kennung der Runde, Zugangsschlüssel, Sitz-Kennung,
+      Name der Runde),</li>
+    <li>die gerade gewählte Runde, eine Kopie des letzten Stands der Runde für schnelles
+      Laden, deine Chip-Farben und deine Push-Einstellung.</li>
+  </ul>
+  <p>Die Kamera nutzt die App nur, wenn du einen Einladungs-QR-Code scannst; das Bild
+    verlässt dein Gerät nicht. Die Bewegungssensoren nutzt die App nur für einen
+    Tiefeneffekt auf dem Tisch; auch diese Werte verlassen dein Gerät nicht.</p>
+
+  <h2 id="zwecke">Wofür und auf welcher Grundlage</h2>
+  <ul>
+    <li><strong>Die App bereitstellen</strong> (Runde anlegen, beitreten, Termine,
+      Reihenfolge, Verlauf, Mitteilungen): Art. 6 Abs. 1 lit. b DSGVO, weil du die App
+      nach den Nutzungsbedingungen nutzt.</li>
+    <li><strong>Push-Mitteilungen:</strong> nur, wenn du sie einschaltest und dein
+      System es erlaubt; Grundlage wie oben, Art. 6 Abs. 1 lit. b DSGVO. Du kannst sie
+      jederzeit in den Systemeinstellungen abschalten. Dann meldet die App dein Push-Token
+      bei allen deinen Runden auf dem Server ab, sobald du sie das nächste Mal öffnest und sie
+      den Server erreicht; klappt das nicht, versucht sie es beim nächsten Öffnen erneut. Bis
+      dahin schickt der Server Mitteilungen noch an den Zustelldienst, dein Gerät zeigt sie
+      aber nicht an.
+      Schaltest du sie später wieder ein, meldet die App das Token neu an. Abmelden kannst
+      du dich auch mit „Lokale Daten löschen“ oder indem du die Runde verlässt.</li>
+    <li><strong>Sicherheit und Betrieb</strong> (Zähler gegen Missbrauch, Protokoll,
+      Sicherungskopien): Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes Interesse ist ein
+      sicherer, stabiler Dienst, der Ausfälle übersteht und Codes vor dem Erraten
+      schützt.</li>
+    <li><strong>Speichern auf deinem Gerät:</strong> Die App legt nur ab, was sie für
+      den von dir gewünschten Dienst unbedingt braucht (§ 25 Abs. 2 Nr. 2 TDDDG).</li>
+  </ul>
+
+  <h2 id="empfaenger">Wer die Daten sieht</h2>
+  <ul>
+    <li><strong>Die anderen Mitglieder deiner Runde</strong> sehen deinen Namen, deine
+      Chip-Farbe, die Rotation, die Termine und den Verlauf. Wer eine Einladung
+      aufruft, sieht vor dem Beitritt den Namen der Runde, die Zahl der Mitglieder und
+      die Namen noch freier Sitze.</li>
+    <li><strong>Cloudflare</strong> (Cloudflare, Inc.): Der Server ist über einen
+      Cloudflare-Tunnel erreichbar. Die verschlüsselte Verbindung endet bei Cloudflare
+      und wird von dort weitergeleitet; Cloudflare verarbeitet dabei deine IP-Adresse,
+      die aufgerufenen Pfade und technisch auch die übertragenen Inhalte, als
+      Auftragsverarbeiter.</li>
+    <li><strong>Expo Push Service</strong> (650 Industries, Inc.): nur wenn du
+      Push-Mitteilungen eingeschaltet hast. Expo erhält dein Push-Token und den Text der
+      Mitteilung, darin stehen Vornamen deiner Runde und gegebenenfalls Termin und Ort.
+      Expo stellt die Mitteilung über den <strong>Apple Push Notification Service</strong>
+      (iPhone) oder <strong>Google Firebase Cloud Messaging</strong> (Android) zu; beide
+      arbeiten dabei als Unterauftragsverarbeiter von Expo.</li>
+    <li><strong>Google Firebase Cloud Messaging</strong> (Google LLC) direkt: Auf Android
+      holt die App ihr Geräte-Token über das Firebase-Projekt der App bei Google, ebenfalls
+      nur, wenn du Push-Mitteilungen eingeschaltet hast.</li>
+    <li><strong>Vercel</strong> (Vercel Inc.) liefert die Web-App und die Website unter
+      app-legals.vercel.app/chipstack aus. Beim Aufruf verarbeitet Vercel technisch
+      notwendige Verbindungsdaten wie IP-Adresse, Zeitpunkt, aufgerufene Seite und
+      Browserkennung, um die Seiten auszuliefern und vor Angriffen zu schützen.
+      Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; mein berechtigtes Interesse ist eine
+      sichere, erreichbare Website. Die Website setzt keine Cookies, nutzt keine Analyse-
+      oder Tracking-Werkzeuge und lädt keine Inhalte von anderen Anbietern, auch keine
+      externen Schriftarten. Die Daten der Runde liegen nicht bei Vercel, sondern auf meinem
+      Server. Die Web-App fällt weg, sobald die Apps für iOS und Android in den Stores sind;
+      die Website bleibt bei Vercel.</li>
+    <li><strong>Apple (App Store) und Google (Google Play)</strong> vertreiben die App.
+      Was beim Kauf und Herunterladen anfällt, auch die Zahlungsdaten, verarbeiten sie in
+      eigener Verantwortung nach ihren eigenen Datenschutzbestimmungen. Karten- oder
+      Kontodaten erhalte ich nicht. Die Stores schicken mir Verkaufs- und
+      Abrechnungsberichte (etwa Bestellnummer, Datum, Land und Preis, bei Google Play auch
+      Ort und Postleitzahl); Google kann mir im Einzelfall Name und E-Mail-Adresse
+      übermitteln, wenn das für die Abwicklung nötig ist. Ich nutze diese Angaben nur für
+      Abrechnung, Steuer und Erstattungen (Art. 6 Abs. 1 lit. b und c DSGVO), bewahre sie
+      nach den gesetzlichen Fristen (§ 147 AO) auf und führe sie nicht mit den Daten der App
+      zusammen. Soweit nötig, erhalten sie mein Steuerberater und das Finanzamt.</li>
+  </ul>
+  <p>Cloudflare, Expo, Google und Vercel sitzen in den USA. Die Übermittlung dorthin stützt sich je Empfänger
+    auf Folgendes (Data Privacy Framework heißt: Angemessenheitsbeschluss der
+    EU-Kommission zum EU-US Data Privacy Framework):</p>
+  <ul>
+    <li><strong>Cloudflare, Inc. (USA)</strong> – EU-US Data Privacy Framework
+      (zertifiziert, geprüft am 27.09.2026), zusätzlich das Cloudflare Data Processing
+      Addendum mit EU-Standardvertragsklauseln.</li>
+    <li><strong>650 Industries, Inc. (Expo, USA)</strong> – EU-US Data Privacy Framework
+      (zertifiziert, geprüft am 27.09.2026), zusätzlich die Auftragsverarbeitung mit
+      EU-Standardvertragsklauseln (Modul 2) in Expos Nutzungsbedingungen (§ 3.2). Apple
+      und Google stellen die Mitteilungen als Unterauftragsverarbeiter von Expo zu.</li>
+    <li><strong>Google LLC (USA, Firebase Cloud Messaging auf Android)</strong> – EU-US
+      Data Privacy Framework (zertifiziert, geprüft am 27.09.2026), zusätzlich die
+      Firebase Data Processing and Security Terms.</li>
+    <li><strong>Vercel Inc. (USA)</strong> – EU-US Data Privacy Framework (zertifiziert,
+      geprüft am 27.09.2026). Vercel liefert nur die Web-App und die Website aus.</li>
+  </ul>
+  <p>Eine Kopie dieser Garantien bekommst du auf Anfrage an privacy@jaszka.com.</p>
+  <p>Ich verkaufe keine Daten und gebe sie an niemanden sonst weiter, außer wie oben beschrieben.</p>
+
+  <h2 id="speicherdauer">Wie lange Daten gespeichert werden</h2>
+  <ul>
+    <li><strong>Runde, Termine und Verlauf der Runde:</strong> bis der Ersteller die
+      Runde löscht.</li>
+    <li><strong>Mitteilungsverlauf:</strong> je Runde nur die neuesten 100 Einträge;
+      ältere werden automatisch gelöscht.</li>
+    <li><strong>Dein Sitz nach dem Verlassen:</strong> Er bleibt mit deinem Namen in der
+      Runde, damit der Verlauf stimmt und du ihn beim erneuten Beitritt wieder übernehmen
+      kannst, bis die Runde gelöscht wird. Löschst du beim Verlassen deinen Namen, wird er
+      sofort durch „Ehemaliges Mitglied“ ersetzt.</li>
+    <li><strong>Push-Token:</strong> bis du die Runde verlässt, entfernt wirst, „Lokale
+      Daten löschen“ nutzt, Mitteilungen in den Systemeinstellungen abschaltest und die App
+      danach den Server erreicht, die Runde gelöscht wird oder der Zustelldienst meldet, dass das Token
+      nicht mehr gültig ist.</li>
+    <li><strong>Sicherungskopien:</strong> Der Server kopiert die Datenbank stündlich auf
+      sich selbst und löscht jede Kopie nach 48 Stunden. Gelöschte Daten können dort also
+      noch bis zu 48 Stunden enthalten sein. Weitere Sicherungen gibt es nicht.</li>
+    <li><strong>Protokoll des Servers:</strong> 14 Tage; ältere Einträge löscht das
+      Betriebssystem des Servers automatisch.</li>
+    <li><strong>Missbrauchszähler mit IP-Adresse:</strong> nur im Arbeitsspeicher,
+      höchstens 24 Stunden (plus bis zu einer Minute bis zum Aufräumen).</li>
+  </ul>
+
+  <h2 id="daten-loeschen">Daten löschen</h2>
+  <p>Weil es kein Konto gibt, löschst du deine Daten je Runde. Diese Wege gibt es:</p>
+  <h3>In der App: Runde verlassen und Namen löschen</h3>
+  <ol>
+    <li>Öffne links oben die Einstellungen und dann „Gruppe und Mitglieder“.</li>
+    <li>Setze unter „Pokerrunde verlassen“ das Häkchen bei „Meinen Namen in dieser Runde
+      löschen“.</li>
+    <li>Tippe auf „Pokerrunde verlassen“ und bestätige mit einem zweiten Tipp.</li>
+  </ol>
+  <p>Danach gilt sofort: Dein Name wird in der Runde durch „Ehemaliges Mitglied“
+    ersetzt, auch im Verlauf. Dein Zugangsschlüssel wird ungültig, deine Push-Token für
+    diese Runde werden gelöscht, und die Mitgliedschaft verschwindet von deinem Gerät.
+    Du verlässt die Rotation. Was bleibt: Termine und die Host-Historie der Runde, jetzt
+    ohne deinen Namen. Ohne das Häkchen bleibt dein Name stehen, damit du deinen Sitz
+    später wieder übernehmen kannst.</p>
+  <p>Hast du die Runde erstellt, übergib zuerst die Ersteller-Rolle an ein anderes
+    Mitglied oder lösche die ganze Runde.</p>
+  <h3>Im Browser</h3>
+  <p>Solange es die Web-App gibt, kannst du unter
+    <a href="https://chip-stack-eta.vercel.app/leave">chip-stack-eta.vercel.app/leave</a> die Runden verlassen, die in diesem Browser gespeichert sind, wahlweise mit
+    „Verlassen und Namen vergessen“. Die Wirkung ist dieselbe wie in der App.</p>
+  <h3>Die ganze Runde löschen</h3>
+  <p>Wer die Runde erstellt hat, kann sie in der App unter Einstellungen, „Daten und
+    Löschung“, „Pokerrunde endgültig löschen“ entfernen. Dafür muss der Name der Runde
+    eingetippt werden. Dann werden die Runde, alle Sitze, Termine, der Verlauf, die
+    Mitteilungen und alle Push-Token sofort gelöscht, für alle Mitglieder.</p>
+  <h3>Nur dieses Gerät aufräumen</h3>
+  <p>Unter Einstellungen, „Daten und Löschung“, „Lokale Daten löschen“ meldet die App
+    zuerst dein Push-Token bei allen deinen Runden auf dem Server ab und löscht dann auf
+    dem Gerät die gewählte Runde, die zwischengespeicherte Kopie, die Chip-Farben und
+    die Push-Einstellung. Deine Mitgliedschaften bleiben bestehen.</p>
+  <h3>In allen anderen Fällen</h3>
+  <p>Hast du keinen Zugang mehr (zum Beispiel nach Geräteverlust) oder wurdest du aus
+    einer Runde entfernt, schreib mir an privacy@jaszka.com und nenne die Runde und deinen Namen
+    darin. Ich lösche oder anonymisiere deinen Namen dann von Hand. In Sicherungskopien
+    verschwinden gelöschte Daten mit deren Ablauf (siehe Speicherdauer).</p>
+
+  <h2 id="rechte">Deine Rechte</h2>
+  <p>Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung
+    (Art. 17), Einschränkung der Verarbeitung (Art. 18) und Datenübertragbarkeit
+    (Art. 20). Gegen eine Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO
+    kannst du aus Gründen deiner besonderen Situation Widerspruch einlegen (Art. 21).
+    Deinen Namen kannst du in der App jederzeit selbst ändern. Für alles andere genügt
+    eine E-Mail an privacy@jaszka.com.</p>
+  <p>Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren, zum
+    Beispiel bei der Behörde deines Wohnorts (Art. 77 DSGVO).</p>
+
+  <h2 id="sicherheit">Sicherheit</h2>
+  <p>Alle Verbindungen sind per HTTPS verschlüsselt. Zugangsschlüssel und
+    Wiederherstellungscodes speichert der Server nur als Prüfwert. Der Server nimmt
+    Verbindungen nur über den Tunnel an und hat keinen offenen Datenbank-Zugang.</p>
+
+  <h2 id="pflicht">Musst du Daten angeben?</h2>
+  <p>Ohne einen Namen in der Runde funktioniert die App nicht; einen echten vollen
+    Namen brauchst du dafür nicht, ein Vorname oder Spitzname genügt. Der Ort eines
+    Termins und Push-Mitteilungen sind freiwillig.</p>
+
+  <h2 id="aenderungen">Änderungen</h2>
+  <p>Ändert sich die App so, dass andere Daten anfallen, passe ich diese Erklärung an.
+    Es gilt die Fassung mit dem neuesten Stand-Datum oben.</p>
+</main>
+<footer>
+  <nav aria-label="Rechtliches">
+    <a href="/chipstack/datenschutz">Datenschutz</a> ·
+    <a href="/chipstack/impressum">Impressum</a> ·
+    <a href="/chipstack/nutzungsbedingungen">Nutzungsbedingungen</a> ·
+    <a href="/chipstack/support">Support</a>
+  </nav>
+</footer>
+</body>
+</html>

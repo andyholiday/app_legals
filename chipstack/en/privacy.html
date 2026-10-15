@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy – Chip Stack</title>
+  <link rel="stylesheet" href="/chipstack/site.css">
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p>This is a courtesy translation. The German version is legally binding.
+    <a href="/chipstack/datenschutz" lang="de" hreflang="de">Datenschutzerklärung (Deutsch)</a></p>
+  <p>Chip Stack is a small app that a private poker round uses to organise its dates,
+    the host order and its history. This page explains which data is involved, where it
+    is stored and how you can get rid of it again.</p>
+  <p>Last updated: 15 October 2026</p>
+
+  <h2 id="controller">Controller</h2>
+  <p>AppManufaktur<br>
+    Inh. André Jaszka<br>
+    Postfach 1130<br>
+    48318 Sendenhorst<br>
+    Germany<br>
+    Email: privacy@jaszka.com</p>
+  <p>This policy applies to the “Chip Stack” apps for iOS and Android, the web app at
+    chip-stack-eta.vercel.app, the pages at chipstack.jahaus.de and the website at
+    app-legals.vercel.app/chipstack. I will shut down the web app as soon as the apps for
+    iOS and Android are available in the stores; the website remains.</p>
+
+  <h2 id="summary">The key points</h2>
+  <ul>
+    <li>There is <strong>no account</strong>: no email address, no phone number,
+      no password.</li>
+    <li>There is <strong>no tracking, no advertising and no analytics tools</strong>.</li>
+    <li>The data is stored on my own server at my home in Germany.</li>
+    <li>Push notifications are optional and only active if you turn them on.</li>
+  </ul>
+
+  <h2 id="access">How access works</h2>
+  <p>When you create a round or join one with an invitation code, the server generates a
+    random access key for exactly this membership. Your device stores it (in the app in
+    the system’s protected keychain/keystore, in the web app in your browser’s storage) and
+    sends it with every request. The server itself does not store the key, only a check
+    value derived from it (SHA-256). There is a separate key for each round.</p>
+
+  <h2 id="data">Which data is processed</h2>
+  <h3>On the server</h3>
+  <ul>
+    <li><strong>Your membership:</strong> the name you enter in the round (for example
+      your first name), a random identifier of your seat, your chip colour, your position
+      in the rotation, whether you are currently paused, whether you created the round,
+      the time you joined and, where applicable, the time you left, as well as the check
+      value of your access key.</li>
+    <li><strong>Data of the round:</strong> the name of the round, the dates (date, time
+      and, if entered, a location), who is or was host when, the order, substitute hosts
+      including undo operations, the invitation code and the check value of the recovery
+      code.</li>
+    <li><strong>Notification history:</strong> events of the round (for example “date
+      changed” or “has joined”) with the identifiers of the seats involved, plus, for each
+      seat, up to which point you have read or cleared the history or hidden individual
+      entries. The texts containing names are only generated from the current names when
+      they are displayed.</li>
+    <li><strong>Push token</strong> (only if you turn on push notifications): a delivery
+      address for notifications on your device, the platform (iOS or Android), the
+      language of your device (German or English, so that the notification arrives in that
+      language) and when it was created and last confirmed, per membership.</li>
+    <li><strong>Server log:</strong> For each request, a random request identifier, the
+      method (for example GET), the path requested and the response status are logged. The
+      path may contain the identifier of the round and of seats; invitation codes and push
+      tokens are made unrecognisable beforehand. Your IP address, your browser or device and
+      content are not logged. Errors are logged with a technical error message; when
+      notifications are sent, together with the identifier of the round.</li>
+    <li><strong>IP address, only briefly:</strong> To protect against abuse (for example
+      trying out codes one after another), the server counts requests per IP address. These
+      counters are held in memory only. Each counter is valid for at most 24 hours; after
+      that the server deletes it, including the IP address, within one minute. After a
+      restart all counters are gone.</li>
+  </ul>
+  <h3>Only on your device</h3>
+  <ul>
+    <li>your memberships (identifier of the round, access key, seat identifier,
+      name of the round),</li>
+    <li>the currently selected round, a copy of the round’s last state for fast loading,
+      your chip colours and your push setting.</li>
+  </ul>
+  <p>The app only uses the camera when you scan an invitation QR code; the image does not
+    leave your device. The app only uses the motion sensors for a depth effect on the
+    table; these values do not leave your device either.</p>
+
+  <h2 id="purposes">Purposes and legal basis</h2>
+  <ul>
+    <li><strong>Providing the app</strong> (creating a round, joining, dates, order,
+      history, notifications): Art. 6(1)(b) GDPR, because you use the app under the Terms
+      of Use.</li>
+    <li><strong>Push notifications:</strong> only if you turn them on and your system
+      allows it; legal basis as above, Art. 6(1)(b) GDPR. You can turn them off at any
+      time in the system settings. The app then unsubscribes your push token from all your
+      rounds on the server as soon as you next open it and it reaches the server; if that
+      fails, it tries again the next time you open it. Until then the server still sends
+      notifications to the delivery service, but your device does not show them. If you
+      turn them back on later, the app registers the token again. You can also unsubscribe
+      with “Delete local data” or by leaving the round.</li>
+    <li><strong>Security and operation</strong> (abuse counters, log, backups):
+      Art. 6(1)(f) GDPR. My legitimate interest is a secure, stable service that survives
+      outages and protects codes from being guessed.</li>
+    <li><strong>Storage on your device:</strong> The app only stores what is strictly
+      necessary for the service you have requested (Section 25(2) no. 2 TDDDG, the German
+      Telecommunications Digital Services Data Protection Act).</li>
+  </ul>
+
+  <h2 id="recipients">Who sees the data</h2>
+  <ul>
+    <li><strong>The other members of your round</strong> see your name, your chip colour,
+      the rotation, the dates and the history. Anyone who opens an invitation sees, before
+      joining, the name of the round, the number of members and the names of seats that
+      have not yet been taken.</li>
+    <li><strong>Cloudflare</strong> (Cloudflare, Inc.): The server is reachable via a
+      Cloudflare Tunnel. The encrypted connection ends at Cloudflare and is forwarded from
+      there; in doing so, Cloudflare processes your IP address, the paths requested and,
+      technically, also the content transmitted, as a processor.</li>
+    <li><strong>Expo Push Service</strong> (650 Industries, Inc.): only if you have turned
+      on push notifications. Expo receives your push token and the text of the
+      notification, which contains first names from your round and, where applicable, the
+      date and location. Expo delivers the notification via the <strong>Apple Push
+      Notification service</strong> (iPhone) or <strong>Google Firebase Cloud
+      Messaging</strong> (Android); both act as sub-processors of Expo.</li>
+    <li><strong>Google Firebase Cloud Messaging</strong> (Google LLC) directly: On Android,
+      the app obtains its device token from Google via the app’s Firebase project, likewise
+      only if you have turned on push notifications.</li>
+    <li><strong>Vercel</strong> (Vercel Inc.) delivers the web app and the website at
+      app-legals.vercel.app/chipstack. When a page is accessed, Vercel processes
+      technically necessary connection data such as IP address, time, the page requested
+      and browser identifier in order to deliver the pages and protect them against
+      attacks. The legal basis is Art. 6(1)(f) GDPR; my legitimate interest is a secure,
+      available website. The website sets no cookies, uses no analytics or tracking tools
+      and loads no content from other providers, not even external fonts. The data of the
+      round is not stored at Vercel but on my server. The web app will no longer be used as
+      soon as the apps for iOS and Android are available in the stores; the website remains
+      at Vercel.</li>
+    <li><strong>Apple (App Store) and Google (Google Play)</strong> distribute the app.
+      Whatever arises when you buy and download it, including payment data, they process
+      under their own responsibility in accordance with their own privacy policies. I do not
+      receive card or account details. The stores send me sales and billing reports (for
+      example order number, date, country and price, and for Google Play also city and
+      postal code); in individual cases Google may send me your name and email address if
+      this is necessary for processing. I use this information only for billing, tax and
+      refunds (Art. 6(1)(b) and (c) GDPR), retain it in accordance with the statutory
+      retention periods (Section 147 of the German Fiscal Code, AO) and do not combine it
+      with the app’s data. Where necessary, my tax adviser and the tax office receive
+      it.</li>
+  </ul>
+  <p>Cloudflare, Expo, Google and Vercel are based in the USA. The transfer there is based,
+    per recipient, on the following (Data Privacy Framework means: the European
+    Commission’s adequacy decision on the EU-US Data Privacy Framework):</p>
+  <ul>
+    <li><strong>Cloudflare, Inc. (USA)</strong> – EU-US Data Privacy Framework
+      (certified, checked on 27 September 2026), additionally the Cloudflare Data Processing
+      Addendum with EU Standard Contractual Clauses.</li>
+    <li><strong>650 Industries, Inc. (Expo, USA)</strong> – EU-US Data Privacy Framework
+      (certified, checked on 27 September 2026), additionally the data processing terms with
+      EU Standard Contractual Clauses (Module 2) in Expo’s Terms of Service (§ 3.2). Apple
+      and Google deliver the notifications as sub-processors of Expo.</li>
+    <li><strong>Google LLC (USA, Firebase Cloud Messaging on Android)</strong> – EU-US
+      Data Privacy Framework (certified, checked on 27 September 2026), additionally the
+      Firebase Data Processing and Security Terms.</li>
+    <li><strong>Vercel Inc. (USA)</strong> – EU-US Data Privacy Framework (certified,
+      checked on 27 September 2026). Vercel only delivers the web app and the website.</li>
+  </ul>
+  <p>You can obtain a copy of these safeguards on request at privacy@jaszka.com.</p>
+  <p>I do not sell any data and do not pass it on to anyone else, except as described
+    above.</p>
+
+  <h2 id="retention">How long data is stored</h2>
+  <ul>
+    <li><strong>Round, dates and history of the round:</strong> until the creator deletes
+      the round.</li>
+    <li><strong>Notification history:</strong> only the latest 100 entries per round;
+      older ones are deleted automatically.</li>
+    <li><strong>Your seat after leaving:</strong> It remains in the round with your name so
+      that the history stays correct and you can take it over again if you rejoin, until
+      the round is deleted. If you delete your name when leaving, it is immediately replaced
+      by “Former member”.</li>
+    <li><strong>Push token:</strong> until you leave the round, are removed, use “Delete
+      local data”, turn off notifications in the system settings and the app then reaches
+      the server, the round is deleted or the delivery service reports that the token is no longer
+      valid.</li>
+    <li><strong>Backups:</strong> The server copies the database to itself every hour and
+      deletes each copy after 48 hours. Deleted data may therefore still be contained there
+      for up to 48 hours. There are no other backups.</li>
+    <li><strong>Server log:</strong> 14 days; older entries are deleted automatically by
+      the server’s operating system.</li>
+    <li><strong>Abuse counters with IP address:</strong> in memory only, for at most
+      24 hours (plus up to one minute until clean-up).</li>
+  </ul>
+
+  <h2 id="delete-data">Deleting data</h2>
+  <p>Because there is no account, you delete your data per round. These are the ways to do
+    it:</p>
+  <h3>In the app: leave the round and delete your name</h3>
+  <ol>
+    <li>Open the settings at the top left and then “Group and members”.</li>
+    <li>Under “Leave poker round”, tick “Delete my name in this round”.</li>
+    <li>Tap “Leave poker round” and confirm with a second tap.</li>
+  </ol>
+  <p>The following then applies immediately: your name is replaced in the round by
+    “Former member”, including in the history. Your access key becomes invalid, your push
+    tokens for this round are deleted, and the membership disappears from your device.
+    You leave the rotation. What remains: the dates and the host history of the round, now
+    without your name. Without the tick, your name remains so that you can take over your
+    seat again later.</p>
+  <p>If you created the round, first hand over the creator role to another member or
+    delete the whole round.</p>
+  <h3>In the browser</h3>
+  <p>As long as the web app exists, you can leave the rounds stored in that browser at
+    <a href="https://chip-stack-eta.vercel.app/leave">chip-stack-eta.vercel.app/leave</a>,
+    optionally with “Verlassen und Namen vergessen” (leave and forget name; the web app is
+    in German). The effect is the same as in the app.</p>
+  <h3>Deleting the whole round</h3>
+  <p>The person who created the round can remove it in the app under Settings, “Data and
+    deletion”, “Delete poker round permanently”. To do so, the name of the round must be
+    typed in. The round, all seats, dates, the history, the notifications and all push
+    tokens are then deleted immediately, for all members.</p>
+  <h3>Cleaning up this device only</h3>
+  <p>Under Settings, “Data and deletion”, “Delete local data”, the app first unregisters
+    your push token from all your rounds on the server and then deletes, on the device, the
+    selected round, the cached copy, the chip colours and the push setting. Your
+    memberships remain in place.</p>
+  <h3>In all other cases</h3>
+  <p>If you no longer have access (for example after losing your device) or you were
+    removed from a round, write to me at privacy@jaszka.com and state the round and your name in
+    it. I will then delete or anonymise your name manually. In backups, deleted data
+    disappears when the backups expire (see How long data is stored).</p>
+
+  <h2 id="rights">Your rights</h2>
+  <p>You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure
+    (Art. 17), restriction of processing (Art. 18) and data portability (Art. 20). You
+    may object to processing based on Art. 6(1)(f) GDPR on grounds relating to your
+    particular situation (Art. 21). You can change your name in the app yourself at any
+    time. For everything else, an email to privacy@jaszka.com is sufficient.</p>
+  <p>You also have the right to lodge a complaint with a data protection supervisory
+    authority, for example the authority where you live (Art. 77 GDPR).</p>
+
+  <h2 id="security">Security</h2>
+  <p>All connections are encrypted via HTTPS. The server stores access keys and recovery
+    codes only as check values. The server only accepts connections via the tunnel and has
+    no open database access.</p>
+
+  <h2 id="required">Do you have to provide data?</h2>
+  <p>The app does not work without a name in the round; you do not need a real full name
+    for this, a first name or nickname is enough. The location of a date and push
+    notifications are optional.</p>
+
+  <h2 id="changes">Changes</h2>
+  <p>If the app changes in a way that involves other data, I will update this policy.
+    The version with the most recent “last updated” date above applies.</p>
+</main>
+<footer>
+  <nav aria-label="Legal">
+    <a href="/chipstack/en/privacy">Privacy</a> ·
+    <a href="/chipstack/en/imprint">Imprint</a> ·
+    <a href="/chipstack/en/terms">Terms</a> ·
+    <a href="/chipstack/support#en">Support</a>
+  </nav>
+</footer>
+</body>
+</html>
