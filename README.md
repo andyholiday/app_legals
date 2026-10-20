@@ -53,7 +53,6 @@ Support URLs.
 - **ShipTrip Datenschutz:** `/shiptrip/privacy-de`
 - **ShipTrip Privacy:** `/shiptrip/privacy-en`
 - **Done Datenschutz / Support:** `/done/privacy`, `/done/support`
-- **Chip Stack:** `/chipstack`, `/chipstack/datenschutz`, `/chipstack/impressum`, `/chipstack/nutzungsbedingungen`, `/chipstack/support`, `/chipstack/en`, `/chipstack/en/privacy`, `/chipstack/en/imprint`, `/chipstack/en/terms`
 
 Deploy: `vercel --prod` from the repo root.
 
