@@ -10,5 +10,11 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     }
+  ],
+  "redirects": [
+    { "source": "/shiptrip/privacy-de", "destination": "https://shiptrip.jahaus.de/datenschutz/", "permanent": true },
+    { "source": "/shiptrip/privacy-en", "destination": "https://shiptrip.jahaus.de/en/privacy/", "permanent": true },
+    { "source": "/shiptrip", "destination": "https://shiptrip.jahaus.de/", "permanent": true },
+    { "source": "/shiptrip/:path*", "destination": "https://shiptrip.jahaus.de/", "permanent": true }
   ]
 }
